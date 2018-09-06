@@ -12,5 +12,4 @@ import CoreData
 
 @objc(SanPham)
 public class SanPham: NSManagedObject {
-
 }

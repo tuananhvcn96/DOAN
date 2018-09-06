@@ -17,5 +17,10 @@ class MainCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func setupCell(cell: Product) {
+        nameLabel.text = cell.tensp
+        imageView.image = UIImage(data: (cell.hinhanh as! Data))
+    }
 
 }

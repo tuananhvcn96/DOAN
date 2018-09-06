@@ -10,6 +10,8 @@ import UIKit
 
 class MainController: UIViewController {
     
+    var product = [Product]()
+    
     @IBOutlet weak var btnMenuBar: UIBarButtonItem!
     @IBOutlet weak var mainCollectionView: UICollectionView!
     var textNameLabel: Array = [String]()
