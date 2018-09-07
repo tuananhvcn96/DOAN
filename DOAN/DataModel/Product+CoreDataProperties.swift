@@ -2,7 +2,7 @@
 //  Product+CoreDataProperties.swift
 //  DOAN
 //
-//  Created by Tuan Anh on 8/29/18.
+//  Created by T.A Savvycom on 9/7/18.
 //  Copyright © 2018 Tuan Anh. All rights reserved.
 //
 //
@@ -20,6 +20,6 @@ extension Product {
     @NSManaged public var hinhanh: NSData?
     @NSManaged public var ma_sp: Int32
     @NSManaged public var tensp: String?
-    @NSManaged public var sanpham: SanPham?
+    @NSManaged public var mota: String?
 
 }

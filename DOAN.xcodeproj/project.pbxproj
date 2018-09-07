@@ -10,6 +10,10 @@
 		AA0C62582140E99E0070ACC2 /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0C62572140E99E0070ACC2 /* DB.swift */; };
 		AA0C625A214114460070ACC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA0C6259214114460070ACC2 /* Main.storyboard */; };
 		AA0C625C2141240E0070ACC2 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0C625B2141240E0070ACC2 /* UI.swift */; };
+		AA0C62632142626B0070ACC2 /* SanPham+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0C625F2142626B0070ACC2 /* SanPham+CoreDataClass.swift */; };
+		AA0C62642142626B0070ACC2 /* SanPham+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0C62602142626B0070ACC2 /* SanPham+CoreDataProperties.swift */; };
+		AA0C62652142626B0070ACC2 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0C62612142626B0070ACC2 /* Product+CoreDataClass.swift */; };
+		AA0C62662142626B0070ACC2 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0C62622142626B0070ACC2 /* Product+CoreDataProperties.swift */; };
 		CC2D0CF0211A95C400B47377 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2D0CEF211A95C400B47377 /* AppDelegate.swift */; };
 		CC2D0CF2211A95C400B47377 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2D0CF1211A95C400B47377 /* MainController.swift */; };
 		CC2D0CF8211A95C400B47377 /* DOAN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC2D0CF6211A95C400B47377 /* DOAN.xcdatamodeld */; };
@@ -20,10 +24,6 @@
 		CC8EC4742136851E00E85496 /* QueryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8EC4732136851E00E85496 /* QueryData.swift */; };
 		CC8EC47821368AB200E85496 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8EC47621368AB200E85496 /* MainCollectionViewCell.swift */; };
 		CC8EC47921368AB200E85496 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC8EC47721368AB200E85496 /* MainCollectionViewCell.xib */; };
-		CC8EC4A22136918B00E85496 /* SanPham+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8EC49E2136918B00E85496 /* SanPham+CoreDataClass.swift */; };
-		CC8EC4A32136918B00E85496 /* SanPham+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8EC49F2136918B00E85496 /* SanPham+CoreDataProperties.swift */; };
-		CC8EC4A42136918B00E85496 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8EC4A02136918B00E85496 /* Product+CoreDataClass.swift */; };
-		CC8EC4A7213691D100E85496 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8EC4A6213691D100E85496 /* Product+CoreDataProperties.swift */; };
 		CCCF93A52132FF10009EF093 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF93A42132FF10009EF093 /* MenuViewController.swift */; };
 		CCCF93A72132FF46009EF093 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF93A62132FF46009EF093 /* MenuTableViewCell.swift */; };
 		CCCF93A921330C28009EF093 /* AllProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF93A821330C28009EF093 /* AllProductViewController.swift */; };
@@ -33,6 +33,10 @@
 		AA0C62572140E99E0070ACC2 /* DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		AA0C6259214114460070ACC2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AA0C625B2141240E0070ACC2 /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
+		AA0C625F2142626B0070ACC2 /* SanPham+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanPham+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AA0C62602142626B0070ACC2 /* SanPham+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanPham+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AA0C62612142626B0070ACC2 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AA0C62622142626B0070ACC2 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CC2D0CEC211A95C400B47377 /* DOAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DOAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC2D0CEF211A95C400B47377 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC2D0CF1211A95C400B47377 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -47,10 +51,6 @@
 		CC8EC4732136851E00E85496 /* QueryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryData.swift; sourceTree = "<group>"; };
 		CC8EC47621368AB200E85496 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		CC8EC47721368AB200E85496 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
-		CC8EC49E2136918B00E85496 /* SanPham+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanPham+CoreDataClass.swift"; sourceTree = "<group>"; };
-		CC8EC49F2136918B00E85496 /* SanPham+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanPham+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		CC8EC4A02136918B00E85496 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = "<group>"; };
-		CC8EC4A6213691D100E85496 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CCCF93A42132FF10009EF093 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		CCCF93A62132FF46009EF093 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		CCCF93A821330C28009EF093 /* AllProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllProductViewController.swift; sourceTree = "<group>"; };
@@ -176,10 +176,10 @@
 		CC8EC46A21367C0600E85496 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				CC8EC4A6213691D100E85496 /* Product+CoreDataProperties.swift */,
-				CC8EC49E2136918B00E85496 /* SanPham+CoreDataClass.swift */,
-				CC8EC49F2136918B00E85496 /* SanPham+CoreDataProperties.swift */,
-				CC8EC4A02136918B00E85496 /* Product+CoreDataClass.swift */,
+				AA0C625F2142626B0070ACC2 /* SanPham+CoreDataClass.swift */,
+				AA0C62602142626B0070ACC2 /* SanPham+CoreDataProperties.swift */,
+				AA0C62612142626B0070ACC2 /* Product+CoreDataClass.swift */,
+				AA0C62622142626B0070ACC2 /* Product+CoreDataProperties.swift */,
 				CC8EC4732136851E00E85496 /* QueryData.swift */,
 			);
 			path = DataModel;
@@ -258,22 +258,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC8EC4A7213691D100E85496 /* Product+CoreDataProperties.swift in Sources */,
 				AA0C625C2141240E0070ACC2 /* UI.swift in Sources */,
 				CCCF93A52132FF10009EF093 /* MenuViewController.swift in Sources */,
 				CC2D0CF2211A95C400B47377 /* MainController.swift in Sources */,
 				CC8EC4742136851E00E85496 /* QueryData.swift in Sources */,
 				CC8EC47821368AB200E85496 /* MainCollectionViewCell.swift in Sources */,
-				CC8EC4A32136918B00E85496 /* SanPham+CoreDataProperties.swift in Sources */,
-				CC8EC4A22136918B00E85496 /* SanPham+CoreDataClass.swift in Sources */,
+				AA0C62632142626B0070ACC2 /* SanPham+CoreDataClass.swift in Sources */,
 				CCCF93A72132FF46009EF093 /* MenuTableViewCell.swift in Sources */,
 				AA0C62582140E99E0070ACC2 /* DB.swift in Sources */,
+				AA0C62652142626B0070ACC2 /* Product+CoreDataClass.swift in Sources */,
 				CC4464AE213CDA0700AAA08E /* AddProductViewController.swift in Sources */,
 				CCCF93A921330C28009EF093 /* AllProductViewController.swift in Sources */,
 				CC2D0CF8211A95C400B47377 /* DOAN.xcdatamodeld in Sources */,
 				CC2D0CF0211A95C400B47377 /* AppDelegate.swift in Sources */,
+				AA0C62642142626B0070ACC2 /* SanPham+CoreDataProperties.swift in Sources */,
+				AA0C62662142626B0070ACC2 /* Product+CoreDataProperties.swift in Sources */,
 				CC2D0D08211A97EB00B47377 /* SWRevealViewController.m in Sources */,
-				CC8EC4A42136918B00E85496 /* Product+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,7 @@
 //  SanPham+CoreDataProperties.swift
 //  DOAN
 //
-//  Created by Tuan Anh on 8/29/18.
+//  Created by T.A Savvycom on 9/7/18.
 //  Copyright © 2018 Tuan Anh. All rights reserved.
 //
 //
@@ -24,6 +24,5 @@ extension SanPham {
     @NSManaged public var idsp: Int32
     @NSManaged public var masp: Int32
     @NSManaged public var tensp: String?
-    @NSManaged public var product: Product?
 
 }

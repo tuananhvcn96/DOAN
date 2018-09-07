@@ -10,7 +10,7 @@ import UIKit
 
 class MainController: UIViewController {
     
-    var product = [Product]()
+    var products = [Product]()
     
     @IBOutlet weak var btnMenuBar: UIBarButtonItem!
     @IBOutlet weak var mainCollectionView: UICollectionView!
@@ -26,6 +26,14 @@ class MainController: UIViewController {
         self.title = "Menu"
         textNameLabel = ["Coffee","Breakfast","Munchies","Sandwiches"]
         self.setupCollectionView()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        products = Product.getAll() as! [Product]
+        mainCollectionView.reloadData()
     }
     
     @IBAction func onTapAddProduct(_ sender: Any) {
@@ -55,13 +63,15 @@ class MainController: UIViewController {
 
 extension MainController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return products.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let product = products[indexPath.row]
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as? MainCollectionViewCell else {
             return UICollectionViewCell()
         }
+        cell.setupCell(cell: product)
         
         return cell
     }

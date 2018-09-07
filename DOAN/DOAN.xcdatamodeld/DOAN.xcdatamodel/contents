@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Product" representedClassName="Product" syncable="YES">
         <attribute name="hinhanh" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="ma_sp" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mota" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tensp" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="sanpham" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SanPham" inverseName="product" inverseEntity="SanPham" syncable="YES"/>
     </entity>
     <entity name="SanPham" representedClassName="SanPham" syncable="YES">
         <attribute name="danhgia" optional="YES" attributeType="String" syncable="YES"/>
@@ -14,10 +14,9 @@
         <attribute name="idsp" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="masp" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="tensp" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="sanpham" inverseEntity="Product" syncable="YES"/>
     </entity>
     <elements>
         <element name="Product" positionX="-63" positionY="-18" width="128" height="105"/>
-        <element name="SanPham" positionX="-54" positionY="18" width="128" height="30"/>
+        <element name="SanPham" positionX="-54" positionY="18" width="128" height="150"/>
     </elements>
 </model>

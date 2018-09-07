@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -31,16 +31,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4J-KT-bX8">
                                 <rect key="frame" x="0.0" y="153" width="160" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Freshly brewed coffee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dA-92-kT0">
-                                        <rect key="frame" x="8" y="37" width="127" height="14.5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Freshly brewed coffee" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dA-92-kT0">
+                                        <rect key="frame" x="8" y="37" width="144" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="144" id="sSl-z8-7BA"/>
+                                            <constraint firstAttribute="height" constant="15" id="smN-ni-UUS"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coffee " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nsd-f8-5n2">
-                                        <rect key="frame" x="8" y="8" width="61" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nsd-f8-5n2">
+                                        <rect key="frame" x="8" y="8" width="144" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="144" id="eZX-3k-gna"/>
+                                            <constraint firstAttribute="height" constant="20" id="tne-nl-gp1"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -48,7 +54,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="7dA-92-kT0" firstAttribute="leading" secondItem="I4J-KT-bX8" secondAttribute="leading" constant="8" id="2TK-4b-VeW"/>
+                                    <constraint firstItem="Nsd-f8-5n2" firstAttribute="top" secondItem="I4J-KT-bX8" secondAttribute="top" constant="8" id="RBc-b8-a7U"/>
+                                    <constraint firstItem="Nsd-f8-5n2" firstAttribute="leading" secondItem="I4J-KT-bX8" secondAttribute="leading" constant="8" id="RyB-yF-cxZ"/>
                                     <constraint firstAttribute="height" constant="60" id="jBP-Cw-mgW"/>
+                                    <constraint firstItem="7dA-92-kT0" firstAttribute="top" secondItem="Nsd-f8-5n2" secondAttribute="bottom" constant="9" id="mxz-3g-aeq"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -72,6 +82,11 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="12" height="6"/>
+            <connections>
+                <outlet property="desriLabel" destination="7dA-92-kT0" id="kEx-54-ldI"/>
+                <outlet property="imageView" destination="ZBx-iB-k4V" id="AgW-dc-Q28"/>
+                <outlet property="nameLabel" destination="Nsd-f8-5n2" id="n2m-mh-IJA"/>
+            </connections>
             <point key="canvasLocation" x="-157" y="-154.5"/>
         </collectionViewCell>
     </objects>

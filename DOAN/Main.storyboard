@@ -277,6 +277,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mu3-fW-rUA">
+                                <rect key="frame" x="69" y="175" width="237" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5wM-cp-2fq"/>
@@ -286,6 +293,7 @@
                         <outlet property="buttonAddImage" destination="EaF-xg-FcZ" id="gpp-s3-Iba"/>
                         <outlet property="imageView" destination="UMG-8p-GHZ" id="rqD-jn-mLt"/>
                         <outlet property="lblAddProduct" destination="FqQ-aF-JAc" id="U1b-ks-oFB"/>
+                        <outlet property="lblDersip" destination="Mu3-fW-rUA" id="uPu-iI-rrU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhD-RN-diQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
