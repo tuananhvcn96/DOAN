@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		AA0C62582140E99E0070ACC2 /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0C62572140E99E0070ACC2 /* DB.swift */; };
-		AA0C625A214114460070ACC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA0C6259214114460070ACC2 /* Main.storyboard */; };
+		AA0C625A214114460070ACC2 /* 4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA0C6259214114460070ACC2 /* 4.storyboard */; };
 		AA0C625C2141240E0070ACC2 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0C625B2141240E0070ACC2 /* UI.swift */; };
-		AA0C62632142626B0070ACC2 /* SanPham+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0C625F2142626B0070ACC2 /* SanPham+CoreDataClass.swift */; };
-		AA0C62642142626B0070ACC2 /* SanPham+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0C62602142626B0070ACC2 /* SanPham+CoreDataProperties.swift */; };
-		AA0C62652142626B0070ACC2 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0C62612142626B0070ACC2 /* Product+CoreDataClass.swift */; };
-		AA0C62662142626B0070ACC2 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0C62622142626B0070ACC2 /* Product+CoreDataProperties.swift */; };
+		AABDC3A621461711003873CC /* AddSanPhamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3A521461711003873CC /* AddSanPhamViewController.swift */; };
+		AABDC3AB21462342003873CC /* LoaiSanPham+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3A721462342003873CC /* LoaiSanPham+CoreDataClass.swift */; };
+		AABDC3AC21462342003873CC /* LoaiSanPham+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3A821462342003873CC /* LoaiSanPham+CoreDataProperties.swift */; };
+		AABDC3AD21462342003873CC /* SanPham+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3A921462342003873CC /* SanPham+CoreDataClass.swift */; };
+		AABDC3AE21462342003873CC /* SanPham+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3AA21462342003873CC /* SanPham+CoreDataProperties.swift */; };
 		CC2D0CF0211A95C400B47377 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2D0CEF211A95C400B47377 /* AppDelegate.swift */; };
 		CC2D0CF2211A95C400B47377 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2D0CF1211A95C400B47377 /* MainController.swift */; };
 		CC2D0CF8211A95C400B47377 /* DOAN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC2D0CF6211A95C400B47377 /* DOAN.xcdatamodeld */; };
@@ -31,12 +32,13 @@
 
 /* Begin PBXFileReference section */
 		AA0C62572140E99E0070ACC2 /* DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
-		AA0C6259214114460070ACC2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AA0C6259214114460070ACC2 /* 4.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = 4.storyboard; sourceTree = "<group>"; };
 		AA0C625B2141240E0070ACC2 /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
-		AA0C625F2142626B0070ACC2 /* SanPham+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanPham+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AA0C62602142626B0070ACC2 /* SanPham+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanPham+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		AA0C62612142626B0070ACC2 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AA0C62622142626B0070ACC2 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AABDC3A521461711003873CC /* AddSanPhamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSanPhamViewController.swift; sourceTree = "<group>"; };
+		AABDC3A721462342003873CC /* LoaiSanPham+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoaiSanPham+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AABDC3A821462342003873CC /* LoaiSanPham+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoaiSanPham+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AABDC3A921462342003873CC /* SanPham+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanPham+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AABDC3AA21462342003873CC /* SanPham+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanPham+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CC2D0CEC211A95C400B47377 /* DOAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DOAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC2D0CEF211A95C400B47377 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC2D0CF1211A95C400B47377 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		AABDC3A42146168E003873CC /* SanPham */ = {
+			isa = PBXGroup;
+			children = (
+				AABDC3A521461711003873CC /* AddSanPhamViewController.swift */,
+			);
+			path = SanPham;
+			sourceTree = "<group>";
+		};
 		CC2D0CE3211A95C400B47377 = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +112,7 @@
 				CC2D0D0B211A9A5F00B47377 /* Model */,
 				CC2D0D09211A9A3E00B47377 /* Controller */,
 				CC2D0CEF211A95C400B47377 /* AppDelegate.swift */,
-				AA0C6259214114460070ACC2 /* Main.storyboard */,
+				AA0C6259214114460070ACC2 /* 4.storyboard */,
 				CC2D0CF9211A95C600B47377 /* Assets.xcassets */,
 				CC2D0CFE211A95C600B47377 /* Info.plist */,
 				CC2D0CF6211A95C400B47377 /* DOAN.xcdatamodeld */,
@@ -123,7 +133,8 @@
 		CC2D0D09211A9A3E00B47377 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CC2D0D10211A9F1900B47377 /* Product */,
+				AABDC3A42146168E003873CC /* SanPham */,
+				CC2D0D10211A9F1900B47377 /* AddLoaiSP */,
 				CC2D0D0F211A9DFD00B47377 /* Silde Menu */,
 				CCCF93A42132FF10009EF093 /* MenuViewController.swift */,
 				CCCF93A62132FF46009EF093 /* MenuTableViewCell.swift */,
@@ -154,14 +165,14 @@
 			path = "Silde Menu";
 			sourceTree = "<group>";
 		};
-		CC2D0D10211A9F1900B47377 /* Product */ = {
+		CC2D0D10211A9F1900B47377 /* AddLoaiSP */ = {
 			isa = PBXGroup;
 			children = (
 				CC4464AF213CDA2300AAA08E /* Cell */,
 				CC4464AD213CDA0700AAA08E /* AddProductViewController.swift */,
 				CC2D0CF1211A95C400B47377 /* MainController.swift */,
 			);
-			path = Product;
+			path = AddLoaiSP;
 			sourceTree = "<group>";
 		};
 		CC4464AF213CDA2300AAA08E /* Cell */ = {
@@ -176,10 +187,10 @@
 		CC8EC46A21367C0600E85496 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				AA0C625F2142626B0070ACC2 /* SanPham+CoreDataClass.swift */,
-				AA0C62602142626B0070ACC2 /* SanPham+CoreDataProperties.swift */,
-				AA0C62612142626B0070ACC2 /* Product+CoreDataClass.swift */,
-				AA0C62622142626B0070ACC2 /* Product+CoreDataProperties.swift */,
+				AABDC3A721462342003873CC /* LoaiSanPham+CoreDataClass.swift */,
+				AABDC3A821462342003873CC /* LoaiSanPham+CoreDataProperties.swift */,
+				AABDC3A921462342003873CC /* SanPham+CoreDataClass.swift */,
+				AABDC3AA21462342003873CC /* SanPham+CoreDataProperties.swift */,
 				CC8EC4732136851E00E85496 /* QueryData.swift */,
 			);
 			path = DataModel;
@@ -247,7 +258,7 @@
 				CC2D0CFD211A95C600B47377 /* LaunchScreen.storyboard in Resources */,
 				CC2D0CFA211A95C600B47377 /* Assets.xcassets in Resources */,
 				CC8EC47921368AB200E85496 /* MainCollectionViewCell.xib in Resources */,
-				AA0C625A214114460070ACC2 /* Main.storyboard in Resources */,
+				AA0C625A214114460070ACC2 /* 4.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,19 +271,20 @@
 			files = (
 				AA0C625C2141240E0070ACC2 /* UI.swift in Sources */,
 				CCCF93A52132FF10009EF093 /* MenuViewController.swift in Sources */,
+				AABDC3AD21462342003873CC /* SanPham+CoreDataClass.swift in Sources */,
 				CC2D0CF2211A95C400B47377 /* MainController.swift in Sources */,
 				CC8EC4742136851E00E85496 /* QueryData.swift in Sources */,
 				CC8EC47821368AB200E85496 /* MainCollectionViewCell.swift in Sources */,
-				AA0C62632142626B0070ACC2 /* SanPham+CoreDataClass.swift in Sources */,
 				CCCF93A72132FF46009EF093 /* MenuTableViewCell.swift in Sources */,
+				AABDC3AE21462342003873CC /* SanPham+CoreDataProperties.swift in Sources */,
 				AA0C62582140E99E0070ACC2 /* DB.swift in Sources */,
-				AA0C62652142626B0070ACC2 /* Product+CoreDataClass.swift in Sources */,
+				AABDC3AB21462342003873CC /* LoaiSanPham+CoreDataClass.swift in Sources */,
+				AABDC3A621461711003873CC /* AddSanPhamViewController.swift in Sources */,
+				AABDC3AC21462342003873CC /* LoaiSanPham+CoreDataProperties.swift in Sources */,
 				CC4464AE213CDA0700AAA08E /* AddProductViewController.swift in Sources */,
 				CCCF93A921330C28009EF093 /* AllProductViewController.swift in Sources */,
 				CC2D0CF8211A95C400B47377 /* DOAN.xcdatamodeld in Sources */,
 				CC2D0CF0211A95C400B47377 /* AppDelegate.swift in Sources */,
-				AA0C62642142626B0070ACC2 /* SanPham+CoreDataProperties.swift in Sources */,
-				AA0C62662142626B0070ACC2 /* Product+CoreDataProperties.swift in Sources */,
 				CC2D0D08211A97EB00B47377 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

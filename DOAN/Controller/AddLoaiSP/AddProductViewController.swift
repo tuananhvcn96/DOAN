@@ -64,7 +64,7 @@ class AddProductViewController : UIViewController, UIImagePickerControllerDelega
             let name = lblAddProduct.text!
             let describe = lblDersip.text!
             
-            let product = Product.createNew() as! Product
+            let product = LoaiSanPham.createNew() as! LoaiSanPham
             product.tensp = name
             product.mota = describe
             

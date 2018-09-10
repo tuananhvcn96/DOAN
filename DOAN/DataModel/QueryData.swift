@@ -17,9 +17,9 @@ class QueryDataManager {
         self.persistentContainer = persistentContainer
     }
     
-    func allContact() -> [Product] {
+    func allContact() -> [LoaiSanPham] {
         do {
-            let contacts = try self.persistentContainer.viewContext.fetch(NSFetchRequest(entityName: "Product")) as! [Product]
+            let contacts = try self.persistentContainer.viewContext.fetch(NSFetchRequest(entityName: "Product")) as! [LoaiSanPham]
             return contacts
         } catch {
             print("Error fecthing contacs")

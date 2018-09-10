@@ -1,8 +1,8 @@
 //
-//  Product+CoreDataClass.swift
+//  LoaiSanPham+CoreDataClass.swift
 //  DOAN
 //
-//  Created by T.A Savvycom on 9/7/18.
+//  Created by T.A Savvycom on 9/10/18.
 //  Copyright © 2018 Tuan Anh. All rights reserved.
 //
 //
@@ -10,11 +10,10 @@
 import Foundation
 import CoreData
 
-@objc(Product)
-public class Product: NSManagedObject {
+@objc(LoaiSanPham)
+public class LoaiSanPham: NSManagedObject {
 
-    // tạo mới một đối tượng để chèn vào CSDL
-    static let className = "Product"
+    static let className = "LoaiSanPham"
     
     static func createNew() -> NSManagedObject {
         return NSEntityDescription.insertNewObject(forEntityName: className, into: DB.MOC)

@@ -21,7 +21,7 @@ class MainCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func setupCell(cell: Product) {
+    func setupCell(cell: LoaiSanPham) {
         //self.nameLabelText = cell.tensp
         
         //guard let cellName = cell.tensp as? String else { return }

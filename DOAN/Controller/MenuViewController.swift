@@ -61,5 +61,13 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
             
             revealViewController.pushFrontViewController(newFrontViewController, animated: true)
         }
+        if cell.lblMenuName.text! == "Product" {
+            let mainStroryboarb: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let desController = mainStroryboarb.instantiateViewController(withIdentifier: "AddSanPhamViewController") as! AddSanPhamViewController
+            
+            let newFrontViewController = UINavigationController.init(rootViewController: desController)
+            
+            revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+        }
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class MainController: UIViewController {
     
-    var products = [Product]()
+    var products = [LoaiSanPham]()
     
     @IBOutlet weak var btnMenuBar: UIBarButtonItem!
     @IBOutlet weak var mainCollectionView: UICollectionView!
@@ -32,7 +32,7 @@ class MainController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        products = Product.getAll() as! [Product]
+        products = LoaiSanPham.getAll() as! [LoaiSanPham]
         mainCollectionView.reloadData()
     }
     
