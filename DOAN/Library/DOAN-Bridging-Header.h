@@ -3,3 +3,7 @@
 //
 
 #import "SWRevealViewController.h"
+
+#import "FMDatabase.h"
+#import "FMDatabaseAdditions.h"
+#import "FMResultSet.h"
