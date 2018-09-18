@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-class loaiSanPham: NSObject {
+class loaiSanPham {
     
     var id_loaisp: Int = Int()
     var tensp: String = String()
     var motasp: String = String()
-    var hinhanh: NSData = NSData()
+    var hinhanh: Data = Data()
     
 }

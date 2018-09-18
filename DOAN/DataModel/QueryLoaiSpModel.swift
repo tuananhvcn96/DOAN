@@ -17,7 +17,7 @@ class QueryLoaiSpModel : NSObject {
     
     class func getInstance() -> QueryLoaiSpModel{
         if (sharedInstance.database == nil){
-            sharedInstance.database = FMDatabase(path: Util.getPath(fileName: "shopbanh.db"))
+            sharedInstance.database = FMDatabase(path: Util.getPath(fileName: "shopping.db"))
         }
         return sharedInstance
     }
@@ -27,8 +27,31 @@ class QueryLoaiSpModel : NSObject {
     
     func insertData(_ loaisp: loaiSanPham) -> Bool {
         sharedInstance.database!.open()
-        let isInserted = sharedInstance.database!.executeUpdate("INSERT INTO LoaiSanPham(tensp,motasp,hinhanh) VALUES (?,?,?)",
-                                                                withArgumentsIn: [loaisp.tensp,loaisp.motasp,UIImagePNGRepresentation(loaisp.hinhanh)!])
+        let isInserted = sharedInstance.database!.executeUpdate("INSERT INTO LoaiSanPham(tensanpham,motasanpham,hinhanh) VALUES (?,?,?)",
+                                                                withArgumentsIn: [loaisp.tensp,loaisp.motasp,loaisp.hinhanh])
+        
+        sharedInstance.database!.close()
+        return isInserted
+    }
+    
+    func getAllData() -> [loaiSanPham] {
+        sharedInstance.database!.open()
+        
+        let resultSet: FMResultSet! = sharedInstance.database!.executeQuery("SELECT * FROM LoaiSanPham", withArgumentsIn: [0])
+        
+        var itemProduct: [loaiSanPham] = []
+        if (resultSet != nil) {
+            while resultSet.next() {
+                let item: loaiSanPham = loaiSanPham()
+                item.id_loaisp = Int(resultSet.int(forColumn: "id"))
+                item.tensp = String(resultSet.string(forColumn: "tensanpham")!)
+                item.motasp = String(resultSet.string(forColumn: "motasanpham")!)
+                item.hinhanh = Data(resultSet.data(forColumn: "hinhanh")!)
+                itemProduct.append(item)
+            }
+        }
+        sharedInstance.database!.close()
+        return itemProduct
     }
     
 }

@@ -16,6 +16,7 @@ class MainController: UIViewController {
     @IBOutlet weak var mainCollectionView: UICollectionView!
     var textNameLabel: Array = [String]()
     var desrition: Array = [String]()
+    var getAllDataInfo = [loaiSanPham]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,8 @@ class MainController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        products = LoaiSanPham.getAll() as! [LoaiSanPham]
+//        products = LoaiSanPham.getAll() as! [LoaiSanPham]
+        getAllDataInfo = QueryLoaiSpModel.getInstance().getAllData()
         mainCollectionView.reloadData()
     }
     
@@ -63,11 +65,11 @@ class MainController: UIViewController {
 
 extension MainController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return products.count
+        return getAllDataInfo.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let product = products[indexPath.row]
+        let product = getAllDataInfo[indexPath.row]
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as? MainCollectionViewCell else {
             return UICollectionViewCell()
         }

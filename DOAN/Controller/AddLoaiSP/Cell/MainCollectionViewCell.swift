@@ -21,12 +21,12 @@ class MainCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func setupCell(cell: LoaiSanPham) {
+    func setupCell(cell: loaiSanPham) {
         //self.nameLabelText = cell.tensp
         
         //guard let cellName = cell.tensp as? String else { return }
         nameLabel.text = cell.tensp
-        desriLabel.text = cell.mota
+        desriLabel.text = cell.motasp
         imageView.image = UIImage(data: (cell.hinhanh as! Data))
     }
 

@@ -34,8 +34,6 @@ class AddProductViewController : UIViewController, UIImagePickerControllerDelega
         addProductButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
         addProductButton.addTarget(self, action: #selector(self.onTapMenu), for: .touchUpInside)
         return UIBarButtonItem(customView: addProductButton)
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
     }
     
     func navigationLefBarItem() -> UIBarButtonItem {
@@ -57,33 +55,54 @@ class AddProductViewController : UIViewController, UIImagePickerControllerDelega
     
     @objc func onTapMenu() {
         //self.dismiss(animated: true, completion: nil)
+
+//        let result = checkCantAdd()
+//
+//        if result.succcues {
+//            let name = lblAddProduct.text!
+//            let describe = lblDersip.text!
+//
+//            let product = LoaiSanPham.createNew() as! LoaiSanPham
+//            product.tensp = name
+//            product.mota = describe
+//
+//            if image != nil {
+//                product.hinhanh = UIImageJPEGRepresentation(image!, 1) as NSData?
+//            }
+//
+//            DB.save()
+//
+//            UI.aLert(ui: self, title: "Success", message: "New product") {
+//                _ in
+//                _ = self.navigationController?.popViewController(animated: true)
+//                self.dismiss(animated: true, completion: nil)
+//            }
+//        } else {
+//            // hiện thông báo lỗi
+//            UI.ALert(ui: self, title: "Error", message: result.error)
+//        }
         
         let result = checkCantAdd()
         
         if result.succcues {
-            let name = lblAddProduct.text!
-            let describe = lblDersip.text!
-            
-            let product = LoaiSanPham.createNew() as! LoaiSanPham
-            product.tensp = name
-            product.mota = describe
-            
+        
+            let productInfo: loaiSanPham = loaiSanPham()
+            productInfo.tensp = lblAddProduct.text!
+            productInfo.motasp = lblDersip.text!
+        
             if image != nil {
-                product.hinhanh = UIImageJPEGRepresentation(image!, 1) as NSData?
+                productInfo.hinhanh = UIImagePNGRepresentation(image!) as! Data
             }
             
-            DB.save()
-            
-            UI.aLert(ui: self, title: "Success", message: "New product") {
-                _ in
-                _ = self.navigationController?.popViewController(animated: true)
-                self.dismiss(animated: true, completion: nil)
+            let isInserted = QueryLoaiSpModel.getInstance().insertData(productInfo)
+            if isInserted {
+                Util.invokeAlertMethod(strTitle: "", strBody: "Thêm thành công", delegate: nil)
+            } else {
+                Util.invokeAlertMethod(strTitle: "", strBody: "Thêm thất bại", delegate: nil)
             }
         } else {
-            // hiện thông báo lỗi
             UI.ALert(ui: self, title: "Error", message: result.error)
         }
-        
     }
     
     func checkCantAdd() -> (succcues: Bool, error: String) {

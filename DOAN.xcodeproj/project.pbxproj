@@ -15,6 +15,7 @@
 		AABDC3AC21462342003873CC /* LoaiSanPham+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3A821462342003873CC /* LoaiSanPham+CoreDataProperties.swift */; };
 		AABDC3AD21462342003873CC /* SanPham+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3A921462342003873CC /* SanPham+CoreDataClass.swift */; };
 		AABDC3AE21462342003873CC /* SanPham+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3AA21462342003873CC /* SanPham+CoreDataProperties.swift */; };
+		AABDC43721510161003873CC /* shopping.db in Resources */ = {isa = PBXBuildFile; fileRef = AABDC43621510161003873CC /* shopping.db */; };
 		CC2D0CF0211A95C400B47377 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2D0CEF211A95C400B47377 /* AppDelegate.swift */; };
 		CC2D0CF2211A95C400B47377 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2D0CF1211A95C400B47377 /* MainController.swift */; };
 		CC2D0CF8211A95C400B47377 /* DOAN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC2D0CF6211A95C400B47377 /* DOAN.xcdatamodeld */; };
@@ -32,7 +33,6 @@
 		CC4B82EE214D204F00964A9A /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4B82EC214D204F00964A9A /* AVKit.framework */; };
 		CC4B82F0214D205600964A9A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4B82EF214D205600964A9A /* libsqlite3.0.tbd */; };
 		CC4B82F2214D232400964A9A /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B82F1214D232400964A9A /* Util.swift */; };
-		CC4B82F4214D236700964A9A /* shopbanh.db in Resources */ = {isa = PBXBuildFile; fileRef = CC4B82F3214D236700964A9A /* shopbanh.db */; };
 		CC4B82F6214D529E00964A9A /* LoaiSP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B82F5214D529E00964A9A /* LoaiSP.swift */; };
 		CC4B82F8214D665500964A9A /* QueryLoaiSpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B82F7214D665500964A9A /* QueryLoaiSpModel.swift */; };
 		CC8EC4742136851E00E85496 /* QueryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8EC4732136851E00E85496 /* QueryData.swift */; };
@@ -52,6 +52,7 @@
 		AABDC3A821462342003873CC /* LoaiSanPham+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoaiSanPham+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AABDC3A921462342003873CC /* SanPham+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanPham+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AABDC3AA21462342003873CC /* SanPham+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanPham+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AABDC43621510161003873CC /* shopping.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = shopping.db; sourceTree = "<group>"; };
 		CC2D0CEC211A95C400B47377 /* DOAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DOAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC2D0CEF211A95C400B47377 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC2D0CF1211A95C400B47377 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 		CC4B82EC214D204F00964A9A /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		CC4B82EF214D205600964A9A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		CC4B82F1214D232400964A9A /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
-		CC4B82F3214D236700964A9A /* shopbanh.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = shopbanh.db; path = ../../Desktop/shopbanh.db; sourceTree = "<group>"; };
 		CC4B82F5214D529E00964A9A /* LoaiSP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaiSP.swift; sourceTree = "<group>"; };
 		CC4B82F7214D665500964A9A /* QueryLoaiSpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryLoaiSpModel.swift; sourceTree = "<group>"; };
 		CC8EC4732136851E00E85496 /* QueryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryData.swift; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 				CC2D0CF9211A95C600B47377 /* Assets.xcassets */,
 				CC2D0CFE211A95C600B47377 /* Info.plist */,
 				CC2D0CF6211A95C400B47377 /* DOAN.xcdatamodeld */,
-				CC4B82F3214D236700964A9A /* shopbanh.db */,
+				AABDC43621510161003873CC /* shopping.db */,
 			);
 			path = DOAN;
 			sourceTree = "<group>";
@@ -326,12 +326,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC4B82F4214D236700964A9A /* shopbanh.db in Resources */,
 				CC2D0CFD211A95C600B47377 /* LaunchScreen.storyboard in Resources */,
 				CC2D0CFA211A95C600B47377 /* Assets.xcassets in Resources */,
 				CC8EC47921368AB200E85496 /* MainCollectionViewCell.xib in Resources */,
 				CC4B82E9214D202800964A9A /* Info.plist in Resources */,
 				AA0C625A214114460070ACC2 /* Main.storyboard in Resources */,
+				AABDC43721510161003873CC /* shopping.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
