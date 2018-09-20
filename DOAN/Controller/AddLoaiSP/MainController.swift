@@ -10,10 +10,11 @@ import UIKit
 
 class MainController: UIViewController {
     
-    var products = [LoaiSanPham]()
+   
     
     @IBOutlet weak var btnMenuBar: UIBarButtonItem!
     @IBOutlet weak var mainCollectionView: UICollectionView!
+    var products = [LoaiSanPham]()
     var textNameLabel: Array = [String]()
     var desrition: Array = [String]()
     var getAllDataInfo = [loaiSanPham]()

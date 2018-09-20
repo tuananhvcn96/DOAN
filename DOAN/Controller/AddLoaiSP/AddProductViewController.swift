@@ -97,6 +97,7 @@ class AddProductViewController : UIViewController, UIImagePickerControllerDelega
             let isInserted = QueryLoaiSpModel.getInstance().insertData(productInfo)
             if isInserted {
                 Util.invokeAlertMethod(strTitle: "", strBody: "Thêm thành công", delegate: nil)
+                self.dismiss(animated: true, completion: nil)
             } else {
                 Util.invokeAlertMethod(strTitle: "", strBody: "Thêm thất bại", delegate: nil)
             }

@@ -15,7 +15,11 @@
 		AABDC3AC21462342003873CC /* LoaiSanPham+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3A821462342003873CC /* LoaiSanPham+CoreDataProperties.swift */; };
 		AABDC3AD21462342003873CC /* SanPham+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3A921462342003873CC /* SanPham+CoreDataClass.swift */; };
 		AABDC3AE21462342003873CC /* SanPham+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3AA21462342003873CC /* SanPham+CoreDataProperties.swift */; };
-		AABDC43721510161003873CC /* shopping.db in Resources */ = {isa = PBXBuildFile; fileRef = AABDC43621510161003873CC /* shopping.db */; };
+		AABDC4392151FDF5003873CC /* SanPham.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC4382151FDF5003873CC /* SanPham.swift */; };
+		AABDC43C21535A56003873CC /* shopping.db in Resources */ = {isa = PBXBuildFile; fileRef = AABDC43B21535A56003873CC /* shopping.db */; };
+		AABDC43E21538710003873CC /* DetailProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC43D21538710003873CC /* DetailProductViewController.swift */; };
+		AABDC445215387AD003873CC /* DetailProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC443215387AD003873CC /* DetailProductTableViewCell.swift */; };
+		AABDC446215387AD003873CC /* DetailProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AABDC444215387AD003873CC /* DetailProductTableViewCell.xib */; };
 		CC2D0CF0211A95C400B47377 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2D0CEF211A95C400B47377 /* AppDelegate.swift */; };
 		CC2D0CF2211A95C400B47377 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2D0CF1211A95C400B47377 /* MainController.swift */; };
 		CC2D0CF8211A95C400B47377 /* DOAN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC2D0CF6211A95C400B47377 /* DOAN.xcdatamodeld */; };
@@ -52,7 +56,11 @@
 		AABDC3A821462342003873CC /* LoaiSanPham+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoaiSanPham+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AABDC3A921462342003873CC /* SanPham+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanPham+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AABDC3AA21462342003873CC /* SanPham+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanPham+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		AABDC43621510161003873CC /* shopping.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = shopping.db; sourceTree = "<group>"; };
+		AABDC4382151FDF5003873CC /* SanPham.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanPham.swift; sourceTree = "<group>"; };
+		AABDC43B21535A56003873CC /* shopping.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = shopping.db; sourceTree = "<group>"; };
+		AABDC43D21538710003873CC /* DetailProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductViewController.swift; sourceTree = "<group>"; };
+		AABDC443215387AD003873CC /* DetailProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductTableViewCell.swift; sourceTree = "<group>"; };
+		AABDC444215387AD003873CC /* DetailProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailProductTableViewCell.xib; sourceTree = "<group>"; };
 		CC2D0CEC211A95C400B47377 /* DOAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DOAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC2D0CEF211A95C400B47377 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC2D0CF1211A95C400B47377 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -122,6 +130,24 @@
 			path = SanPham;
 			sourceTree = "<group>";
 		};
+		AABDC43F21538717003873CC /* DetailProduct */ = {
+			isa = PBXGroup;
+			children = (
+				AABDC4402153876D003873CC /* Cell */,
+				AABDC43D21538710003873CC /* DetailProductViewController.swift */,
+			);
+			path = DetailProduct;
+			sourceTree = "<group>";
+		};
+		AABDC4402153876D003873CC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AABDC443215387AD003873CC /* DetailProductTableViewCell.swift */,
+				AABDC444215387AD003873CC /* DetailProductTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		CC2D0CE3211A95C400B47377 = {
 			isa = PBXGroup;
 			children = (
@@ -152,8 +178,8 @@
 				CC2D0CEF211A95C400B47377 /* AppDelegate.swift */,
 				CC2D0CF9211A95C600B47377 /* Assets.xcassets */,
 				CC2D0CFE211A95C600B47377 /* Info.plist */,
+				AABDC43B21535A56003873CC /* shopping.db */,
 				CC2D0CF6211A95C400B47377 /* DOAN.xcdatamodeld */,
-				AABDC43621510161003873CC /* shopping.db */,
 			);
 			path = DOAN;
 			sourceTree = "<group>";
@@ -171,6 +197,7 @@
 		CC2D0D09211A9A3E00B47377 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AABDC43F21538717003873CC /* DetailProduct */,
 				AABDC3A42146168E003873CC /* SanPham */,
 				CC2D0D10211A9F1900B47377 /* AddLoaiSP */,
 				CC2D0D0F211A9DFD00B47377 /* Silde Menu */,
@@ -185,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				CC4B82F5214D529E00964A9A /* LoaiSP.swift */,
+				AABDC4382151FDF5003873CC /* SanPham.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -330,8 +358,9 @@
 				CC2D0CFA211A95C600B47377 /* Assets.xcassets in Resources */,
 				CC8EC47921368AB200E85496 /* MainCollectionViewCell.xib in Resources */,
 				CC4B82E9214D202800964A9A /* Info.plist in Resources */,
+				AABDC446215387AD003873CC /* DetailProductTableViewCell.xib in Resources */,
 				AA0C625A214114460070ACC2 /* Main.storyboard in Resources */,
-				AABDC43721510161003873CC /* shopping.db in Resources */,
+				AABDC43C21535A56003873CC /* shopping.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,9 +386,12 @@
 				AABDC3AE21462342003873CC /* SanPham+CoreDataProperties.swift in Sources */,
 				AA0C62582140E99E0070ACC2 /* DB.swift in Sources */,
 				AABDC3AB21462342003873CC /* LoaiSanPham+CoreDataClass.swift in Sources */,
+				AABDC43E21538710003873CC /* DetailProductViewController.swift in Sources */,
 				AABDC3A621461711003873CC /* AddSanPhamViewController.swift in Sources */,
+				AABDC4392151FDF5003873CC /* SanPham.swift in Sources */,
 				CC4B82F2214D232400964A9A /* Util.swift in Sources */,
 				AABDC3AC21462342003873CC /* LoaiSanPham+CoreDataProperties.swift in Sources */,
+				AABDC445215387AD003873CC /* DetailProductTableViewCell.swift in Sources */,
 				CC4464AE213CDA0700AAA08E /* AddProductViewController.swift in Sources */,
 				CCCF93A921330C28009EF093 /* AllProductViewController.swift in Sources */,
 				CC2D0CF8211A95C400B47377 /* DOAN.xcdatamodeld in Sources */,

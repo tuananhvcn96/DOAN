@@ -34,6 +34,15 @@ class QueryLoaiSpModel : NSObject {
         return isInserted
     }
     
+    func insertDataProduct(_ product: SanPhamm) -> Bool {
+        sharedInstance.database!.open()
+        
+        let relustSet = sharedInstance.database!.executeUpdate("INSERT INTO SanPham (id,tensanpham, motasanpham,ghichu,danhgia,giaban,gianhap,hinhanh) VALUES (?,?,?,?,?,?,?,?)", withArgumentsIn: [product.id,product.tensanpham,product.motasanpham,product.ghichu,product.danhgia,product.giaban,product.gianhap,product.hinhanh])
+        
+        sharedInstance.database!.close()
+        return relustSet
+    }
+    
     func getAllData() -> [loaiSanPham] {
         sharedInstance.database!.open()
         
@@ -53,6 +62,8 @@ class QueryLoaiSpModel : NSObject {
         sharedInstance.database!.close()
         return itemProduct
     }
+    
+    
     
 }
 
