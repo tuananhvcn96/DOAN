@@ -14,12 +14,17 @@ class DetailProductViewController: UIViewController {
     @IBOutlet weak var nameProductlbl: UILabel!
     @IBOutlet weak var noteProductlbl: UILabel!
     
-    var product: [SanPhamm] = []
+    var product = [SanPhamm]()
+    static let iddentifer = "DetailProductViewController"
+    var id: Int?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         navigationItem.leftBarButtonItem = navigationLefBarItem()
+        product = QueryLoaiSpModel.getInstance().getAllDataProduct()
         self.setupTableView()
     }
     
@@ -38,11 +43,13 @@ class DetailProductViewController: UIViewController {
     
     @objc func onTapMenuBack() {
         self.dismiss(animated: true, completion: nil)
+        
+        self.navigationController?.popViewController(animated: true)
     }
     
     func setupTableView() {
         let nib = UINib(nibName: "DetailProductTableViewCell", bundle: nil)
-        self.tableView.register(nib, forCellReuseIdentifier: "DetailProductTableViewCell")
+        self.tableView.register(nib, forCellReuseIdentifier: "DetailProductTableViewCell") as? DetailProductTableViewCell
     }
 }
 
@@ -52,7 +59,7 @@ extension DetailProductViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,7 +69,6 @@ extension DetailProductViewController: UITableViewDataSource {
         }
         let products = product[indexPath.row]
         cell.setupData(products)
-        
         return cell
     }
 }

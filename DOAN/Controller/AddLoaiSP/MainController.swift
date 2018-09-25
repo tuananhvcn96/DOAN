@@ -18,6 +18,7 @@ class MainController: UIViewController {
     var textNameLabel: Array = [String]()
     var desrition: Array = [String]()
     var getAllDataInfo = [loaiSanPham]()
+    var id: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +78,15 @@ extension MainController: UICollectionViewDataSource {
         cell.setupCell(cell: product)
         
         return cell
+    }
+}
+extension MainController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let array = getAllDataInfo[indexPath.item]
+        guard let detailProductVC = self.storyboard?.instantiateViewController(withIdentifier: DetailProductViewController.iddentifer) as? DetailProductViewController else { return }
+        
+        detailProductVC.id = array.id_loaisp
+        self.navigationController?.pushViewController(detailProductVC, animated: true)
     }
 }
 
