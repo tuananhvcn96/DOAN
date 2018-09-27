@@ -24,7 +24,7 @@ class DetailProductViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         navigationItem.leftBarButtonItem = navigationLefBarItem()
-        product = QueryLoaiSpModel.getInstance().getAllDataProduct()
+        product = QueryLoaiSpModel.getInstance().getAllDataProduct(id: id!)
         self.setupTableView()
     }
     

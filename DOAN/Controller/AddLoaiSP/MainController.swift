@@ -80,6 +80,7 @@ extension MainController: UICollectionViewDataSource {
         return cell
     }
 }
+
 extension MainController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let array = getAllDataInfo[indexPath.item]
@@ -89,4 +90,3 @@ extension MainController: UICollectionViewDelegate {
         self.navigationController?.pushViewController(detailProductVC, animated: true)
     }
 }
-

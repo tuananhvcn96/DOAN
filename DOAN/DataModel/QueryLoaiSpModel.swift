@@ -63,16 +63,17 @@ class QueryLoaiSpModel : NSObject {
         return itemProduct
     }
     
-    func getAllDataProduct() -> [SanPhamm] {
+    func getAllDataProduct(id: Int) -> [SanPhamm] {
         sharedInstance.database!.open()
         
-        let resultProduct: FMResultSet! = sharedInstance.database!.executeQuery("SELECT * FROM SanPham", withArgumentsIn: [0])
+        let resultProduct: FMResultSet! = sharedInstance.database!.executeQuery("SELECT * FROM SanPham WHERE id = \(id)", withArgumentsIn: [0])
         
         var itemProduct: [SanPhamm] = []
         if (resultProduct != nil) {
             while resultProduct.next() {
                 let item: SanPhamm = SanPhamm()
                 item.idsanpham = Int(resultProduct.int(forColumn: "idsanpham"))
+                item.id = Int(resultProduct.int(forColumn: "id"))
                 item.tensanpham = String(resultProduct.string(forColumn: "tensanpham")!)
                 item.motasanpham = String(resultProduct.string(forColumn: "motasanpham")!)
                 item.ghichu = String(resultProduct.string(forColumn: "ghichu")!)
