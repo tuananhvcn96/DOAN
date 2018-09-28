@@ -13,6 +13,7 @@
 		AA0C62582140E99E0070ACC2 /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0C62572140E99E0070ACC2 /* DB.swift */; };
 		AA0C625A214114460070ACC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA0C6259214114460070ACC2 /* Main.storyboard */; };
 		AA0C625C2141240E0070ACC2 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0C625B2141240E0070ACC2 /* UI.swift */; };
+		AA6BF141215DD99800D23746 /* DetailPromotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6BF140215DD99800D23746 /* DetailPromotionViewController.swift */; };
 		AABDC3A621461711003873CC /* AddSanPhamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3A521461711003873CC /* AddSanPhamViewController.swift */; };
 		AABDC3AB21462342003873CC /* LoaiSanPham+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3A721462342003873CC /* LoaiSanPham+CoreDataClass.swift */; };
 		AABDC3AC21462342003873CC /* LoaiSanPham+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3A821462342003873CC /* LoaiSanPham+CoreDataProperties.swift */; };
@@ -59,6 +60,7 @@
 		AA0C62572140E99E0070ACC2 /* DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		AA0C6259214114460070ACC2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AA0C625B2141240E0070ACC2 /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
+		AA6BF140215DD99800D23746 /* DetailPromotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPromotionViewController.swift; sourceTree = "<group>"; };
 		AABDC3A521461711003873CC /* AddSanPhamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSanPhamViewController.swift; sourceTree = "<group>"; };
 		AABDC3A721462342003873CC /* LoaiSanPham+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoaiSanPham+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AABDC3A821462342003873CC /* LoaiSanPham+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoaiSanPham+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -151,6 +153,21 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		AA6BF13E215DD90C00D23746 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		AA6BF13F215DD92100D23746 /* DetailPromotion */ = {
+			isa = PBXGroup;
+			children = (
+				AA6BF140215DD99800D23746 /* DetailPromotionViewController.swift */,
+			);
+			path = DetailPromotion;
+			sourceTree = "<group>";
+		};
 		AABDC3A42146168E003873CC /* SanPham */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +244,8 @@
 		CC2D0D09211A9A3E00B47377 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AA6BF13F215DD92100D23746 /* DetailPromotion */,
+				AA6BF13E215DD90C00D23746 /* New Group */,
 				AABDC43F21538717003873CC /* DetailProduct */,
 				AABDC3A42146168E003873CC /* SanPham */,
 				CC2D0D10211A9F1900B47377 /* AddLoaiSP */,
@@ -435,6 +454,7 @@
 				CC2D0CF2211A95C400B47377 /* MainController.swift in Sources */,
 				CC8EC4742136851E00E85496 /* QueryData.swift in Sources */,
 				CC4B82F6214D529E00964A9A /* LoaiSP.swift in Sources */,
+				AA6BF141215DD99800D23746 /* DetailPromotionViewController.swift in Sources */,
 				CC8EC47821368AB200E85496 /* MainCollectionViewCell.swift in Sources */,
 				CC4B82E8214D202800964A9A /* FMResultSet.m in Sources */,
 				AA06B59A215C73FB000BC20E /* SlideProductRuningCollectionViewCell.swift in Sources */,
@@ -595,9 +615,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 94T6H355HB;
 				INFOPLIST_FILE = DOAN/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -618,9 +638,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 94T6H355HB;
 				INFOPLIST_FILE = DOAN/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
