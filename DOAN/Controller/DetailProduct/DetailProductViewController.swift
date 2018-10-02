@@ -25,6 +25,11 @@ class DetailProductViewController: UIViewController {
         navigationItem.leftBarButtonItem = navigationLefBarItem()
         product = QueryLoaiSpModel.getInstance().getAllDataProduct(id: id!)
         self.setupTableView()
+        tableView.estimatedRowHeight = 44
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        //Detault Background clear
+        tableView.backgroundColor = UIColor.clear
     }
     
     func navigationLefBarItem() -> UIBarButtonItem {
@@ -48,7 +53,7 @@ class DetailProductViewController: UIViewController {
     
     func setupTableView() {
         let nib = UINib(nibName: "DetailProductTableViewCell", bundle: nil)
-        self.tableView.register(nib, forCellReuseIdentifier: "DetailProductTableViewCell") as? DetailProductTableViewCell
+        self.tableView.register(nib, forCellReuseIdentifier: "DetailProductTableViewCell")
     }
 }
 
@@ -75,9 +80,8 @@ extension DetailProductViewController: UITableViewDataSource,UITableViewDelegate
         let productPromotion = product[indexPath.row]
         let vc = DetailPromotionViewController.newVC(categoryName: productPromotion)
         vc.categoryName = productPromotion
-        
-        
-        self.performSegue(withIdentifier: DetailPromotionViewController.identifier, sender: self)
+    
+        self.present(vc, animated: true, completion: nil)
     }
 }
 

@@ -17,6 +17,7 @@ class DetailPromotionViewController: UIViewController {
     @IBOutlet weak var priceLbl: UILabel!
     var categoryName: SanPhamm!
     var product = [SanPhamm]()
+    var listCart = [Cart]()
     
     static let identifier = "DetailPromotionViewController"
     
@@ -47,6 +48,9 @@ class DetailPromotionViewController: UIViewController {
     }
     
     @IBAction func tapCartButton(_ sender: Any) {
+        var productFound = ""
+        var indexPath = 0
+        
         
     }
 }

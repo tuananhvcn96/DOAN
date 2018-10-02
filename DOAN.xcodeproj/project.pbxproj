@@ -14,6 +14,7 @@
 		AA0C625A214114460070ACC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA0C6259214114460070ACC2 /* Main.storyboard */; };
 		AA0C625C2141240E0070ACC2 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0C625B2141240E0070ACC2 /* UI.swift */; };
 		AA6BF141215DD99800D23746 /* DetailPromotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6BF140215DD99800D23746 /* DetailPromotionViewController.swift */; };
+		AA9923EB2163886C005B408E /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9923EA2163886C005B408E /* Cart.swift */; };
 		AABDC3A621461711003873CC /* AddSanPhamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3A521461711003873CC /* AddSanPhamViewController.swift */; };
 		AABDC3AB21462342003873CC /* LoaiSanPham+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3A721462342003873CC /* LoaiSanPham+CoreDataClass.swift */; };
 		AABDC3AC21462342003873CC /* LoaiSanPham+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3A821462342003873CC /* LoaiSanPham+CoreDataProperties.swift */; };
@@ -61,6 +62,7 @@
 		AA0C6259214114460070ACC2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AA0C625B2141240E0070ACC2 /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		AA6BF140215DD99800D23746 /* DetailPromotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPromotionViewController.swift; sourceTree = "<group>"; };
+		AA9923EA2163886C005B408E /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		AABDC3A521461711003873CC /* AddSanPhamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSanPhamViewController.swift; sourceTree = "<group>"; };
 		AABDC3A721462342003873CC /* LoaiSanPham+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoaiSanPham+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AABDC3A821462342003873CC /* LoaiSanPham+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoaiSanPham+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 			children = (
 				CC4B82F5214D529E00964A9A /* LoaiSP.swift */,
 				AABDC4382151FDF5003873CC /* SanPham.swift */,
+				AA9923EA2163886C005B408E /* Cart.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				CC4B82F8214D665500964A9A /* QueryLoaiSpModel.swift in Sources */,
 				CCCF93A72132FF46009EF093 /* MenuTableViewCell.swift in Sources */,
 				AABDC3AE21462342003873CC /* SanPham+CoreDataProperties.swift in Sources */,
+				AA9923EB2163886C005B408E /* Cart.swift in Sources */,
 				AA0C62582140E99E0070ACC2 /* DB.swift in Sources */,
 				AABDC3AB21462342003873CC /* LoaiSanPham+CoreDataClass.swift in Sources */,
 				AABDC43E21538710003873CC /* DetailProductViewController.swift in Sources */,
