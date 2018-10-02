@@ -18,10 +18,9 @@ class DetailProductViewController: UIViewController {
     static let iddentifer = "DetailProductViewController"
     var id: Int?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //tableView.delegate = self
         // Do any additional setup after loading the view.
         navigationItem.leftBarButtonItem = navigationLefBarItem()
         product = QueryLoaiSpModel.getInstance().getAllDataProduct(id: id!)
@@ -53,13 +52,13 @@ class DetailProductViewController: UIViewController {
     }
 }
 
-extension DetailProductViewController: UITableViewDataSource {
+extension DetailProductViewController: UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return product.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 10
+        return 100
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,6 +69,15 @@ extension DetailProductViewController: UITableViewDataSource {
         let products = product[indexPath.row]
         cell.setupData(products)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let productPromotion = product[indexPath.row]
+        let vc = DetailPromotionViewController.newVC(categoryName: productPromotion)
+        vc.categoryName = productPromotion
+        
+        
+        self.performSegue(withIdentifier: DetailPromotionViewController.identifier, sender: self)
     }
 }
 
