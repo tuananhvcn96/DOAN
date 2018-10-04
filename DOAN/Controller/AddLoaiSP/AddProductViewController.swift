@@ -1,5 +1,5 @@
 //
-//  AddProductViewController.swift
+//  AddTypeProductViewController.swift
 //  DOAN
 //
 //  Created by Tuan Anh on 9/3/18.
@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 import CoreData
 
-class AddProductViewController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddTypeProductViewController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var lblAddProduct: UITextField!
     @IBOutlet weak var lblDersip: UITextField!
     @IBOutlet weak var buttonAddProduct: UIButton!
     @IBOutlet weak var buttonAddImage: UIButton!
     @IBOutlet weak var imageView: UIImageView!
-    static let identifier = "AddProductViewController"
+    static let identifier = "AddTypeProductViewController"
     var image: UIImage? = nil
     let imagePicker = UIImagePickerController()
     

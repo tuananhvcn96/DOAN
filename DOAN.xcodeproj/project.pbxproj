@@ -15,6 +15,8 @@
 		AA0C625C2141240E0070ACC2 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0C625B2141240E0070ACC2 /* UI.swift */; };
 		AA6BF141215DD99800D23746 /* DetailPromotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6BF140215DD99800D23746 /* DetailPromotionViewController.swift */; };
 		AA9923EB2163886C005B408E /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9923EA2163886C005B408E /* Cart.swift */; };
+		AA9923EE216602E5005B408E /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9923ED216602E5005B408E /* CartViewController.swift */; };
+		AA9923F1216603A2005B408E /* CartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9923F0216603A2005B408E /* CartViewCell.swift */; };
 		AABDC3A621461711003873CC /* AddSanPhamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3A521461711003873CC /* AddSanPhamViewController.swift */; };
 		AABDC3AB21462342003873CC /* LoaiSanPham+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3A721462342003873CC /* LoaiSanPham+CoreDataClass.swift */; };
 		AABDC3AC21462342003873CC /* LoaiSanPham+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC3A821462342003873CC /* LoaiSanPham+CoreDataProperties.swift */; };
@@ -63,6 +65,8 @@
 		AA0C625B2141240E0070ACC2 /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		AA6BF140215DD99800D23746 /* DetailPromotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPromotionViewController.swift; sourceTree = "<group>"; };
 		AA9923EA2163886C005B408E /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		AA9923ED216602E5005B408E /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		AA9923F0216603A2005B408E /* CartViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewCell.swift; sourceTree = "<group>"; };
 		AABDC3A521461711003873CC /* AddSanPhamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSanPhamViewController.swift; sourceTree = "<group>"; };
 		AABDC3A721462342003873CC /* LoaiSanPham+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoaiSanPham+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AABDC3A821462342003873CC /* LoaiSanPham+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoaiSanPham+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -170,6 +174,23 @@
 			path = DetailPromotion;
 			sourceTree = "<group>";
 		};
+		AA9923EC216600BC005B408E /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				AA9923EF2166038C005B408E /* Cell */,
+				AA9923ED216602E5005B408E /* CartViewController.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		AA9923EF2166038C005B408E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AA9923F0216603A2005B408E /* CartViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		AABDC3A42146168E003873CC /* SanPham */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +267,7 @@
 		CC2D0D09211A9A3E00B47377 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AA9923EC216600BC005B408E /* Cart */,
 				AA6BF13F215DD92100D23746 /* DetailPromotion */,
 				AA6BF13E215DD90C00D23746 /* New Group */,
 				AABDC43F21538717003873CC /* DetailProduct */,
@@ -456,6 +478,7 @@
 				CC4B82E7214D202800964A9A /* FMDatabasePool.m in Sources */,
 				CC2D0CF2211A95C400B47377 /* MainController.swift in Sources */,
 				CC8EC4742136851E00E85496 /* QueryData.swift in Sources */,
+				AA9923EE216602E5005B408E /* CartViewController.swift in Sources */,
 				CC4B82F6214D529E00964A9A /* LoaiSP.swift in Sources */,
 				AA6BF141215DD99800D23746 /* DetailPromotionViewController.swift in Sources */,
 				CC8EC47821368AB200E85496 /* MainCollectionViewCell.swift in Sources */,
@@ -470,6 +493,7 @@
 				AABDC43E21538710003873CC /* DetailProductViewController.swift in Sources */,
 				AABDC3A621461711003873CC /* AddSanPhamViewController.swift in Sources */,
 				AABDC4392151FDF5003873CC /* SanPham.swift in Sources */,
+				AA9923F1216603A2005B408E /* CartViewCell.swift in Sources */,
 				CC4B82F2214D232400964A9A /* Util.swift in Sources */,
 				AABDC3AC21462342003873CC /* LoaiSanPham+CoreDataProperties.swift in Sources */,
 				AABDC445215387AD003873CC /* DetailProductTableViewCell.swift in Sources */,
@@ -616,7 +640,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 08EAEB98DE2EF435A94A6F3D /* Pods-DOAN.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94T6H355HB;
@@ -639,7 +663,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DDC23C7DF459EFB5BBC365BC /* Pods-DOAN.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94T6H355HB;

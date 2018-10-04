@@ -10,8 +10,6 @@ import UIKit
 
 class MainController: UIViewController {
     
-   
-    
     @IBOutlet weak var btnMenuBar: UIBarButtonItem!
     @IBOutlet weak var mainCollectionView: UICollectionView!
     var products = [LoaiSanPham]()
@@ -19,17 +17,20 @@ class MainController: UIViewController {
     var desrition: Array = [String]()
     var getAllDataInfo = [loaiSanPham]()
     var id: Int?
+    static let identifier = "MainController"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        self.setupNavigationBar()
+        self.setupCollectionView()
+    }
+    
+    func setupNavigationBar(){
         btnMenuBar.target = revealViewController()
         btnMenuBar.action = #selector(SWRevealViewController.revealToggle(_:))
         self.title = "Menu"
         textNameLabel = ["Coffee","Breakfast","Munchies","Sandwiches"]
-        self.setupCollectionView()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,7 +42,14 @@ class MainController: UIViewController {
     }
     
     @IBAction func onTapAddProduct(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: AddProductViewController.identifier) as? AddProductViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: AddTypeProductViewController.identifier) as? AddTypeProductViewController
+        let navigationController = UINavigationController(rootViewController: vc!)
+        self.navigationController?.present(navigationController, animated: true, completion: {
+            
+        })
+    }
+    @IBAction func onTapToCart(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: CartViewController.identifier) as? CartViewController
         let navigationController = UINavigationController(rootViewController: vc!)
         self.navigationController?.present(navigationController, animated: true, completion: {
             

@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -367,12 +368,17 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <pickerView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="dMj-50-IIs">
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMj-50-IIs">
                                                 <rect key="frame" x="49" y="45" width="49" height="51"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="51" id="ZFH-YO-Gyw"/>
                                                     <constraint firstAttribute="width" constant="49" id="gxW-w4-70n"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="2D6-LQ-m2P" id="4Au-HE-K1T"/>
+                                                    <outlet property="delegate" destination="2D6-LQ-m2P" id="N6r-9Y-IkH"/>
+                                                </connections>
                                             </pickerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3l-Qn-xLw">
                                                 <rect key="frame" x="219" y="14" width="79" height="21"/>
@@ -472,6 +478,7 @@
                         <outlet property="dersiLbl" destination="he8-aW-jky" id="Iwp-e8-j9O"/>
                         <outlet property="iamgeView" destination="7mO-Rf-qkU" id="ijT-an-diZ"/>
                         <outlet property="pickerQuantity" destination="dMj-50-IIs" id="2bg-HJ-itX"/>
+                        <outlet property="pickerView" destination="dMj-50-IIs" id="98w-gh-vDt"/>
                         <outlet property="priceLbl" destination="eEJ-VS-hwi" id="EK0-ox-uRu"/>
                         <outlet property="titleNameLbl" destination="a9S-kc-leC" id="BFh-MI-TgN"/>
                     </connections>
@@ -521,11 +528,20 @@
                         <barButtonItem key="leftBarButtonItem" image="Menu icon" style="done" id="AWy-sh-C9a">
                             <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="IVr-fe-X7t">
-                            <connections>
-                                <action selector="onTapAddProduct:" destination="abb-s0-PbP" id="eNE-TN-cpg"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="cart30" landscapeImage="cart30" id="53s-lo-KpH">
+                                <color key="tintColor" red="1" green="0.23620562833553271" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="onTapToCart:" destination="abb-s0-PbP" id="LVD-wF-G3s"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="IVr-fe-X7t">
+                                <color key="tintColor" red="1" green="0.15923816120669609" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="onTapAddProduct:" destination="abb-s0-PbP" id="eNE-TN-cpg"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="btnMenuBar" destination="AWy-sh-C9a" id="EYf-6S-ayd"/>
@@ -536,10 +552,10 @@
             </objects>
             <point key="canvasLocation" x="1625" y="936"/>
         </scene>
-        <!--Add Product View Controller-->
+        <!--Add Type Product View Controller-->
         <scene sceneID="84R-KQ-MPE">
             <objects>
-                <viewController storyboardIdentifier="AddProductViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HBh-A1-YXl" customClass="AddProductViewController" customModule="DOAN" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddTypeProductViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HBh-A1-YXl" customClass="AddTypeProductViewController" customModule="DOAN" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fga-iv-vlS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -915,20 +931,20 @@
             </objects>
             <point key="canvasLocation" x="830" y="1800"/>
         </scene>
-        <!--View Controller-->
+        <!--Cart View Controller-->
         <scene sceneID="JhM-4F-xej">
             <objects>
-                <viewController id="afs-Tq-End" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CartViewController" id="afs-Tq-End" customClass="CartViewController" customModule="DOAN" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xGE-kt-0ho"/>
                         <viewControllerLayoutGuide type="bottom" id="5GY-am-bXp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1s7-GJ-tn3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Urm-Uq-g4a">
-                                <rect key="frame" x="-4" y="20" width="383" height="584"/>
+                                <rect key="frame" x="-4" y="0.0" width="383" height="540"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0qB-4h-H8A">
                                         <rect key="frame" x="0.0" y="0.0" width="383" height="50"/>
@@ -967,10 +983,10 @@
                                         </variation>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hgN-Q0-NmO">
-                                        <rect key="frame" x="0.0" y="49" width="383" height="535"/>
+                                        <rect key="frame" x="0.0" y="49" width="383" height="491"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShoppingCartViewCell" rowHeight="85" id="cvp-Af-0mg" customClass="ShoppingCartViewCell" customModule="SCAB_Israel" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartViewCell" rowHeight="85" id="cvp-Af-0mg" customClass="CartViewCell" customModule="DOAN" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="383" height="85"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cvp-Af-0mg" id="8gy-uK-Taq">
@@ -1005,7 +1021,7 @@
                                                         <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="3WA-n8-Gnu">
                                                             <rect key="frame" x="23" y="30" width="94" height="29"/>
                                                             <connections>
-                                                                <action selector="stepperValueChanged:" destination="cvp-Af-0mg" eventType="valueChanged" id="ISt-kU-BaU"/>
+                                                                <action selector="stepperValueChanged:" destination="cvp-Af-0mg" eventType="valueChanged" id="kdo-vM-ZhI"/>
                                                             </connections>
                                                         </stepper>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="gxe-vn-VlZ" userLabel="Product Name">
@@ -1033,9 +1049,9 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="productImage" destination="uPV-RO-5bZ" id="fdI-38-689"/>
-                                                    <outlet property="productName" destination="gxe-vn-VlZ" id="mTg-Pe-xYS"/>
-                                                    <outlet property="productPrice" destination="5CJ-32-AXZ" id="Ros-pJ-LYQ"/>
+                                                    <outlet property="productImageView" destination="uPV-RO-5bZ" id="gdp-nf-WyD"/>
+                                                    <outlet property="productName" destination="gxe-vn-VlZ" id="aSr-Ml-ayI"/>
+                                                    <outlet property="productPrice" destination="5CJ-32-AXZ" id="88I-Fo-DiZ"/>
                                                     <outlet property="productQuantity" destination="i7R-iP-lmc" id="3mi-2N-5LR"/>
                                                     <outlet property="productStepper" destination="3WA-n8-Gnu" id="zhB-Yz-tLU"/>
                                                 </connections>
@@ -1063,8 +1079,8 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="i8u-5x-HVB"/>
                                         <exclude reference="aOy-Ge-Jgt"/>
+                                        <exclude reference="i8u-5x-HVB"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -1072,7 +1088,7 @@
                                 </connections>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLU-Hj-3ml">
-                                <rect key="frame" x="87.5" y="612" width="200" height="43"/>
+                                <rect key="frame" x="87.5" y="548" width="200" height="43"/>
                                 <color key="backgroundColor" red="0.17730169000000001" green="0.62435263399999996" blue="0.37863171099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="Ghb-au-xqX"/>
@@ -1119,6 +1135,14 @@
                             </mask>
                         </variation>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="orderButton" destination="SLU-Hj-3ml" id="leO-nn-1kX"/>
+                        <outlet property="scrollView" destination="Urm-Uq-g4a" id="PaW-UH-uh3"/>
+                        <outlet property="tableView" destination="hgN-Q0-NmO" id="xnR-7y-CXG"/>
+                        <outlet property="totalItems" destination="wIY-PW-USi" id="PU4-9B-QF3"/>
+                        <outlet property="totalPrice" destination="ICt-o7-5CG" id="xw0-1Z-PC7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UGg-gW-MRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1132,6 +1156,7 @@
         <image name="Heart Icon" width="41" height="35"/>
         <image name="Menu icon" width="21" height="14"/>
         <image name="Rectangle 37" width="29" height="16"/>
+        <image name="cart30" width="30" height="30"/>
         <image name="img-1" width="750" height="480"/>
         <image name="pic4" width="400" height="300"/>
         <image name="scab" width="465" height="734"/>

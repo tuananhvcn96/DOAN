@@ -43,6 +43,16 @@ class QueryLoaiSpModel : NSObject {
         return relustSet
     }
     
+    func insertCart(_ cart: Cart) -> Bool {
+        sharedInstance.database!.open()
+        
+        let relustSet = sharedInstance.database!.executeUpdate("INSERT INTO Cart (tensp,motasp,giatien,soluong,hinhanh) VALUES (?,?,?,?,?)", withArgumentsIn: [cart.tensp,cart.motasp,cart.giatien,cart.soluong,cart.hinhanh])
+        
+        sharedInstance.database!.close()
+        
+        return relustSet
+    }
+    
     func getAllData() -> [loaiSanPham] {
         sharedInstance.database!.open()
         
@@ -61,6 +71,29 @@ class QueryLoaiSpModel : NSObject {
         }
         sharedInstance.database!.close()
         return itemProduct
+    }
+    
+    func getAllCart() -> [Cart] {
+        sharedInstance.database!.open()
+        
+        let resultSet: FMResultSet! = sharedInstance.database!.executeQuery("SELECT * FROM Cart", withArgumentsIn: [0])
+        
+        var itemCart: [Cart] = []
+        if (resultSet != nil) {
+            while resultSet.next() {
+                let item: Cart = Cart()
+                item.id = Int(resultSet.int(forColumn: "id"))
+                item.tensp = String(resultSet.string(forColumn: "tensp")!)
+                item.giatien = String(resultSet.string(forColumn: "giatien")!)
+                item.motasp = String(resultSet.string(forColumn: "motasp")!)
+                item.soluong = Int(resultSet.int(forColumn: "soluong"))
+                item.hinhanh = Data(resultSet.data(forColumn: "hinhanh")!)
+                itemCart.append(item)
+            }
+        }
+        
+        sharedInstance.database!.close()
+        return itemCart
     }
     
     func getAllDataProduct(id: Int) -> [SanPhamm] {
@@ -88,7 +121,25 @@ class QueryLoaiSpModel : NSObject {
         return itemProduct
     }
     
-    
+    func updateCart(RecoreId: Int, soluong: Int) -> NSMutableArray {
+        sharedInstance.database!.open()
+        
+        let resultSet: FMResultSet! = sharedInstance.database!.executeQuery("UPDATE Cart SET soluong = ? WHERE id = ?", withArgumentsIn: [soluong,RecoreId])
+        
+        let itemInfo: NSMutableArray = NSMutableArray()
+        if (resultSet != nil) {
+            while resultSet.next() {
+                let item: Cart = Cart()
+                item.id = Int(resultSet.int(forColumn: "id"))
+                item.soluong = Int(resultSet.int(forColumn: "id"))
+                itemInfo.add(item)
+            }
+        }
+        
+        sharedInstance.database!.close()
+        return itemInfo
+    }
+
 }
 
 

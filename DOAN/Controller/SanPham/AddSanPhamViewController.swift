@@ -58,7 +58,6 @@ class AddSanPhamViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBAction func buttonSave(_ sender: Any) {
         let addProduct: SanPhamm = SanPhamm()
-        let products: loaiSanPham
         
         let nameProductlbl = nameSPLbl.text!
         let noteProductlbl = noteLbl.text!
