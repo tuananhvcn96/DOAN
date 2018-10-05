@@ -19,6 +19,8 @@ class CartViewController: UIViewController {
     
     var listCartItem = [Cart]()
     var totalQuantity = 0
+    var totalAmontPrice = 0
+    var getAllListCartItem = NSMutableArray()
     
     override func viewDidLoad() {
         title = "Giỏ Hàng"
@@ -29,9 +31,26 @@ class CartViewController: UIViewController {
         self.setupNavigationBar()
         self.setupHoverQuantity()
         self.tableView.reloadData()
-        
-        
+        self.setupTotalPrice()
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        let itemCart: [Cart] = []
+//        
+//        do{
+//            let relusts = itemCart
+//            listCartItem = relusts
+//        } catch {
+//            print("Dữ liệu không được truy xuất")
+//        }
+//        
+//        self.tableView.reloadData()
+//        for i in 0 ..< listCartItem.count {
+//            print("listItems\(i): \(listCartItem[i])")
+//        }
+//        
+//        self.setupHoverQuantity()
+//    }
     
     func setupHoverQuantity(){
         var itemQuantity = 0
@@ -42,6 +61,28 @@ class CartViewController: UIViewController {
         
         totalQuantity = itemQuantity
         totalItems.text = String("Quantity: \(totalQuantity)")
+        
+//        if itemQuantity != 0 && self.listCartItem.count > 0 {
+//            orderButton.backgroundColor
+//            self.orderButton.isEnabled = false
+//        } else {
+//
+//        }
+        self.orderButton.isEnabled = (itemQuantity != 0 && self.listCartItem.count > 0)
+    }
+    
+    func setupTotalPrice(){
+        var totalPricee = 0
+        var itemAmount = 0
+        for (Qty) in listCartItem {
+            let itemPrice = Qty.giatien
+            let itemQuantity = Qty.soluong
+            itemAmount = itemPrice * itemQuantity
+            totalPricee  = totalPricee + itemAmount
+        }
+        
+        totalAmontPrice = totalPricee
+        totalPrice.text = String("Tiền: \(totalAmontPrice) VNĐ")
     }
     
     func setupToQuery(){
@@ -76,6 +117,30 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         let item = listCartItem[indexPath.row]
         cell.setupData(item)
         
+        cell.delegate = self
+        
         return cell
     }
 }
+
+extension CartViewController: CartViewCellDelegate {
+    func deleteButton(sender: CartViewCell) {
+        print("hover")
+        let cell = sender.tag
+        var item = Cart()
+        
+        item = getAllListCartItem.object(at: sender.tag) as! Cart
+        _ = QueryLoaiSpModel.getInstance().deleteCart(RecoreId: item.id)
+        
+        tableView.reloadData()
+    }
+    
+    func CartViewCellDelegate(_ cell: CartViewCell, quantity: Int, itemUpdate: Cart) {
+        
+    }
+    
+    
+    
+}
+
+

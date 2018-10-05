@@ -12,7 +12,7 @@ class Cart {
     var id: Int = Int()
     var tensp: String = String()
     var motasp: String = String()
-    var giatien: String = String()
+    var giatien: Int = Int()
     var soluong: Int = Int()
     var hinhanh: Data = Data()
 }

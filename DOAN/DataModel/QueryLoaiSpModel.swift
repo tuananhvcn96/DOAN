@@ -84,14 +84,13 @@ class QueryLoaiSpModel : NSObject {
                 let item: Cart = Cart()
                 item.id = Int(resultSet.int(forColumn: "id"))
                 item.tensp = String(resultSet.string(forColumn: "tensp")!)
-                item.giatien = String(resultSet.string(forColumn: "giatien")!)
+                item.giatien = Int(resultSet.int(forColumn: "giatien"))
                 item.motasp = String(resultSet.string(forColumn: "motasp")!)
                 item.soluong = Int(resultSet.int(forColumn: "soluong"))
                 item.hinhanh = Data(resultSet.data(forColumn: "hinhanh")!)
                 itemCart.append(item)
             }
         }
-        
         sharedInstance.database!.close()
         return itemCart
     }
@@ -111,8 +110,8 @@ class QueryLoaiSpModel : NSObject {
                 item.motasanpham = String(resultProduct.string(forColumn: "motasanpham")!)
                 item.ghichu = String(resultProduct.string(forColumn: "ghichu")!)
                 item.danhgia = String(resultProduct.string(forColumn: "danhgia")!)
-                item.giaban = String(resultProduct.string(forColumn: "giaban")!)
-                item.gianhap = String(resultProduct.string(forColumn: "gianhap")!)
+                item.giaban = Int(resultProduct.int(forColumn: "giaban"))
+                item.gianhap = Int(resultProduct.int(forColumn: "gianhap"))
                 item.hinhanh = Data(resultProduct.data(forColumn: "hinhanh")!)
                 itemProduct.append(item)
             }
@@ -139,7 +138,29 @@ class QueryLoaiSpModel : NSObject {
         sharedInstance.database!.close()
         return itemInfo
     }
-
+    
+    func deleteCart(RecoreId: Int) -> NSMutableArray {
+        sharedInstance.database?.open()
+        
+        let resultSet: FMResultSet! = sharedInstance.database!.executeQuery("DELETE FROM Cart WHERE id = ?", withArgumentsIn: [RecoreId])
+        
+        let itemInfo: NSMutableArray = NSMutableArray()
+        if (resultSet != nil) {
+            while resultSet.next() {
+                let item: Cart = Cart()
+                item.id = Int(resultSet.int(forColumn: "id"))
+                item.tensp = String(resultSet.string(forColumn: "tensp")!)
+                item.motasp = String(resultSet.string(forColumn: "motasp")!)
+                item.soluong = Int(resultSet.int(forColumn: "soluong"))
+                item.giatien = Int(resultSet.int(forColumn: "giatien"))
+                item.hinhanh = Data(resultSet.data(forColumn: "hinhanh")!)
+                itemInfo.add(item)
+            }
+        }
+        
+        sharedInstance.database!.close()
+        return itemInfo
+    }
 }
 
 

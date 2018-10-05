@@ -17,8 +17,8 @@ class SanPhamm {
     var motasanpham: String = String()
     var ghichu: String = String()
     var danhgia: String = String()
-    var gianhap: String = String()
-    var giaban: String = String()
+    var gianhap: Int = Int()
+    var giaban: Int = Int()
     var hinhanh: Data = Data()
     var loaiSP: [loaiSanPham] = [loaiSanPham]()
 }

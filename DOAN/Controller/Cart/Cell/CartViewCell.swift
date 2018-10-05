@@ -10,6 +10,7 @@ import UIKit
 
 protocol CartViewCellDelegate {
     func CartViewCellDelegate(_ cell: CartViewCell, quantity: Int, itemUpdate: Cart)
+    func deleteButton(sender: CartViewCell)
 }
 
 class CartViewCell: UITableViewCell {
@@ -21,17 +22,21 @@ class CartViewCell: UITableViewCell {
     @IBOutlet weak var productStepper: UIStepper!
     
     var delegate: CartViewCellDelegate?
-    
     var itemCart: Cart?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    @IBAction func buttonDelete(_ sender: Any) {
+        self.delegate?.deleteButton(sender: self)
+    }
+    
 
     func setupData(_ item: Cart) {
         productName?.text = item.tensp
-        productPrice?.text = item.giatien
+        productPrice?.text = String(item.giatien)
     
         if let qty: Int = item.soluong {
             _ = "Qty. \(qty)"

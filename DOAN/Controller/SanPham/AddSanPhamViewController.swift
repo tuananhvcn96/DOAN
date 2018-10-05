@@ -70,8 +70,8 @@ class AddSanPhamViewController: UIViewController, UIImagePickerControllerDelegat
         addProduct.id = selectedProduct.id_loaisp 
         addProduct.tensanpham = nameProductlbl
         addProduct.ghichu = noteProductlbl
-        addProduct.giaban = priceProductlbl
-        addProduct.gianhap = inputpriceProductlbl
+        addProduct.giaban = Int(priceProductlbl)!
+        addProduct.gianhap = Int(inputpriceProductlbl)!
         addProduct.motasanpham = describeProductTextView
         
         if image != nil {

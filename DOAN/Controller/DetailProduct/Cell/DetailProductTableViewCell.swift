@@ -28,7 +28,7 @@ class DetailProductTableViewCell: UITableViewCell {
     func setupData(_ product: SanPhamm) {
         nameProduct.text = product.tensanpham
         noteProduct.text = product.motasanpham
-        priceProductlbl.text = product.giaban
+        priceProductlbl.text = String(product.giaban)
         imageViewProduct.image = UIImage(data: (product.hinhanh))
     }
 }

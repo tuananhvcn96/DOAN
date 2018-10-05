@@ -43,7 +43,7 @@ class DetailPromotionViewController: UIViewController {
         titleNameLbl.text = categoryName.tensanpham
         iamgeView.image = UIImage(data: (categoryName.hinhanh))
         dersiLbl.text = categoryName.ghichu
-        priceLbl.text = "$\(categoryName.giaban)"
+        priceLbl.text = "\(categoryName.giaban)"
     }
     
     @IBAction func buttonClose(_ sender: UIButton) {
@@ -67,7 +67,7 @@ class DetailPromotionViewController: UIViewController {
         
             addCart.tensp = nameCartLbl
             addCart.motasp = describeCartLbl
-            addCart.giatien = priceCartLbl
+            addCart.giatien = Int(priceCartLbl)!
             addCart.soluong = selectedCart
         
             if iamgeView != nil {

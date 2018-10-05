@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailProductTableViewCell" rowHeight="124" id="KGk-i7-Jjw" customClass="DetailProductTableViewCell" customModule="DOAN" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DetailProductTableViewCell" rowHeight="124" id="KGk-i7-Jjw" customClass="DetailProductTableViewCell" customModule="DOAN" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="357" height="104"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -22,8 +22,9 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEJ-Yi-LpM">
                         <rect key="frame" x="0.0" y="0.0" width="357" height="103.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="htH-wS-6Yi">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="htH-wS-6Yi">
                                 <rect key="frame" x="0.0" y="0.0" width="119" height="104"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="104" id="BQ1-Lp-u76"/>
                                     <constraint firstAttribute="width" constant="119" id="Pjd-ye-P7S"/>
@@ -65,25 +66,28 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stroke 270 Copy" translatesAutoresizingMaskIntoConstraints="NO" id="HGK-bP-afg">
-                                        <rect key="frame" x="143" y="66" width="20" height="16"/>
+                                        <rect key="frame" x="150" y="70" width="13" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="13" id="hgL-ej-iJk"/>
+                                            <constraint firstAttribute="height" constant="12" id="nSS-vP-clp"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="O6E-7K-Qs5" secondAttribute="trailing" constant="114" id="0f1-cy-NPh"/>
+                                    <constraint firstItem="HGK-bP-afg" firstAttribute="top" secondItem="eBG-Ld-jQ9" secondAttribute="bottom" constant="41" id="3gd-rf-2ur"/>
                                     <constraint firstItem="O6E-7K-Qs5" firstAttribute="leading" secondItem="zLr-hK-zLw" secondAttribute="leading" constant="17" id="8GL-fg-cne"/>
-                                    <constraint firstItem="HGK-bP-afg" firstAttribute="leading" secondItem="VCI-MS-C8u" secondAttribute="trailing" constant="67" id="ICw-3F-Mhf"/>
                                     <constraint firstItem="eBG-Ld-jQ9" firstAttribute="top" secondItem="zLr-hK-zLw" secondAttribute="top" constant="8" id="JpG-eJ-e8O"/>
                                     <constraint firstItem="O6E-7K-Qs5" firstAttribute="top" secondItem="eBG-Ld-jQ9" secondAttribute="bottom" constant="8" id="MLc-V3-H0D"/>
-                                    <constraint firstAttribute="bottom" secondItem="HGK-bP-afg" secondAttribute="bottom" constant="22" id="PdB-hv-3Ml"/>
                                     <constraint firstItem="Ik0-JP-bgM" firstAttribute="top" secondItem="eBG-Ld-jQ9" secondAttribute="bottom" constant="31" id="R8H-F0-cUi"/>
-                                    <constraint firstItem="Ik0-JP-bgM" firstAttribute="leading" secondItem="HGK-bP-afg" secondAttribute="trailing" constant="8" id="YgT-4X-0B4"/>
+                                    <constraint firstItem="Ik0-JP-bgM" firstAttribute="leading" secondItem="HGK-bP-afg" secondAttribute="trailing" constant="8" id="UZA-SP-G9z"/>
                                     <constraint firstItem="VCI-MS-C8u" firstAttribute="leading" secondItem="zLr-hK-zLw" secondAttribute="leading" constant="17" id="cSE-eC-G1o"/>
                                     <constraint firstItem="eBG-Ld-jQ9" firstAttribute="leading" secondItem="zLr-hK-zLw" secondAttribute="leading" constant="17" id="cff-K7-30Y"/>
                                     <constraint firstAttribute="trailing" secondItem="Ik0-JP-bgM" secondAttribute="trailing" constant="8" id="e8s-1d-ofY"/>
                                     <constraint firstAttribute="trailing" secondItem="eBG-Ld-jQ9" secondAttribute="trailing" constant="16" id="eKg-J8-6f0"/>
                                     <constraint firstAttribute="bottom" secondItem="Ik0-JP-bgM" secondAttribute="bottom" constant="15" id="jbS-X3-5kG"/>
-                                    <constraint firstItem="HGK-bP-afg" firstAttribute="top" secondItem="eBG-Ld-jQ9" secondAttribute="bottom" constant="37" id="n6Z-Z0-l2G"/>
+                                    <constraint firstItem="HGK-bP-afg" firstAttribute="leading" secondItem="VCI-MS-C8u" secondAttribute="trailing" constant="74" id="meE-gM-ahd"/>
                                     <constraint firstItem="VCI-MS-C8u" firstAttribute="top" secondItem="O6E-7K-Qs5" secondAttribute="bottom" constant="8" id="zQn-kQ-Ra4"/>
                                 </constraints>
                             </view>
