@@ -159,13 +159,6 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		AA6BF13E215DD90C00D23746 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		AA6BF13F215DD92100D23746 /* DetailPromotion */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,7 +262,6 @@
 			children = (
 				AA9923EC216600BC005B408E /* Cart */,
 				AA6BF13F215DD92100D23746 /* DetailPromotion */,
-				AA6BF13E215DD90C00D23746 /* New Group */,
 				AABDC43F21538717003873CC /* DetailProduct */,
 				AABDC3A42146168E003873CC /* SanPham */,
 				CC2D0D10211A9F1900B47377 /* AddLoaiSP */,

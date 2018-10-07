@@ -30,27 +30,30 @@ class CartViewController: UIViewController {
         self.setupToQuery()
         self.setupNavigationBar()
         self.setupHoverQuantity()
-        self.tableView.reloadData()
         self.setupTotalPrice()
+        self.tableView.reloadData()
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
 //        let itemCart: [Cart] = []
-//        
+//
 //        do{
 //            let relusts = itemCart
 //            listCartItem = relusts
 //        } catch {
 //            print("Dữ liệu không được truy xuất")
 //        }
-//        
-//        self.tableView.reloadData()
 //        for i in 0 ..< listCartItem.count {
 //            print("listItems\(i): \(listCartItem[i])")
 //        }
-//        
-//        self.setupHoverQuantity()
-//    }
+        
+        
+        self.setupToQuery()
+        self.setupHoverQuantity()
+        self.tableView.reloadData()
+    }
     
     func setupHoverQuantity(){
         var itemQuantity = 0
@@ -125,12 +128,13 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension CartViewController: CartViewCellDelegate {
     func deleteButton(sender: CartViewCell) {
+        let indexPath = sender.itemCart?.id
+        //let itemUpdate = listCartItem[indexPath]
         print("hover")
-        let cell = sender.tag
-        var item = Cart()
         
-        item = getAllListCartItem.object(at: sender.tag) as! Cart
-        _ = QueryLoaiSpModel.getInstance().deleteCart(RecoreId: item.id)
+        _ = QueryLoaiSpModel.getInstance().deleteCart(RecoreId: indexPath!)
+        
+        listCartItem = QueryLoaiSpModel.getInstance().getAllCart()
         
         tableView.reloadData()
     }
