@@ -16,7 +16,7 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        menuNameArr = ["Home", "AllProduct", "Product","GiamGia","Phone"]
+        menuNameArr = ["Home", "AllProduct", "Product","Login","Phone"]
         iconImage = [UIImage(named: "pic1")!,UIImage(named: "pic2")!,UIImage(named: "pic3")!,UIImage(named: "pic4")!,UIImage(named: "pic5")!]
         // Do any additional setup after loading the view.
         imageViewProfile.image = UIImage(named: "AppIcon-1")
@@ -64,6 +64,14 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         if cell.lblMenuName.text! == "Product" {
             let mainStroryboarb: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let desController = mainStroryboarb.instantiateViewController(withIdentifier: "AddSanPhamViewController") as! AddSanPhamViewController
+            
+            let newFrontViewController = UINavigationController.init(rootViewController: desController)
+            
+            revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+        }
+        if cell.lblMenuName.text == "Login" {
+            let mainStroryboarb: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let desController = mainStroryboarb.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
             
             let newFrontViewController = UINavigationController.init(rootViewController: desController)
             

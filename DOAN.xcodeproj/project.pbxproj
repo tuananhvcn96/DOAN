@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA00B18C216B0D6300DC9641 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00B18B216B0D6300DC9641 /* LoginViewController.swift */; };
+		AA00B18E216B11C300DC9641 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00B18D216B11C300DC9641 /* Extension.swift */; };
 		AA06B59A215C73FB000BC20E /* SlideProductRuningCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA06B598215C73FB000BC20E /* SlideProductRuningCollectionViewCell.swift */; };
 		AA06B59B215C73FB000BC20E /* SlideProductRuningCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA06B599215C73FB000BC20E /* SlideProductRuningCollectionViewCell.xib */; };
 		AA06B59F215C7CEC000BC20E /* SlideProductRunningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA06B59E215C7CEC000BC20E /* SlideProductRunningViewController.swift */; };
@@ -57,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		08EAEB98DE2EF435A94A6F3D /* Pods-DOAN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DOAN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DOAN/Pods-DOAN.debug.xcconfig"; sourceTree = "<group>"; };
+		AA00B18B216B0D6300DC9641 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AA00B18D216B11C300DC9641 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		AA06B598215C73FB000BC20E /* SlideProductRuningCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SlideProductRuningCollectionViewCell.swift; path = DOAN/Controller/SildeProductRunning/Cell/SlideProductRuningCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		AA06B599215C73FB000BC20E /* SlideProductRuningCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SlideProductRuningCollectionViewCell.xib; path = DOAN/Controller/SildeProductRunning/Cell/SlideProductRuningCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
 		AA06B59E215C7CEC000BC20E /* SlideProductRunningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideProductRunningViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +144,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AA00B18A216B0CA600DC9641 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AA00B18B216B0D6300DC9641 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		AA06B59D215C7C2D000BC20E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +167,7 @@
 				AA0C62572140E99E0070ACC2 /* DB.swift */,
 				AA0C625B2141240E0070ACC2 /* UI.swift */,
 				CC4B82F1214D232400964A9A /* Util.swift */,
+				AA00B18D216B11C300DC9641 /* Extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -260,6 +273,7 @@
 		CC2D0D09211A9A3E00B47377 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AA00B18A216B0CA600DC9641 /* Login */,
 				AA9923EC216600BC005B408E /* Cart */,
 				AA6BF13F215DD92100D23746 /* DetailPromotion */,
 				AABDC43F21538717003873CC /* DetailProduct */,
@@ -490,7 +504,9 @@
 				AABDC3AC21462342003873CC /* LoaiSanPham+CoreDataProperties.swift in Sources */,
 				AABDC445215387AD003873CC /* DetailProductTableViewCell.swift in Sources */,
 				CC4464AE213CDA0700AAA08E /* AddProductViewController.swift in Sources */,
+				AA00B18E216B11C300DC9641 /* Extension.swift in Sources */,
 				CCCF93A921330C28009EF093 /* AllProductViewController.swift in Sources */,
+				AA00B18C216B0D6300DC9641 /* LoginViewController.swift in Sources */,
 				CC2D0CF8211A95C400B47377 /* DOAN.xcdatamodeld in Sources */,
 				CC4B82E5214D202800964A9A /* FMDatabaseAdditions.m in Sources */,
 				CC2D0CF0211A95C400B47377 /* AppDelegate.swift in Sources */,

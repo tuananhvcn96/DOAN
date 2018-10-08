@@ -31,9 +31,12 @@ class CartViewController: UIViewController {
         self.setupNavigationBar()
         self.setupHoverQuantity()
         self.setupTotalPrice()
-        self.tableView.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.setupToQuery()
+        tableView.reloadData()
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -52,7 +55,7 @@ class CartViewController: UIViewController {
         
         self.setupToQuery()
         self.setupHoverQuantity()
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
     
     func setupHoverQuantity(){

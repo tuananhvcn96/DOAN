@@ -25,10 +25,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="htH-wS-6Yi">
                                 <rect key="frame" x="0.0" y="0.0" width="119" height="104"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="104" id="BQ1-Lp-u76"/>
-                                    <constraint firstAttribute="width" constant="119" id="Pjd-ye-P7S"/>
-                                </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLr-hK-zLw">
                                 <rect key="frame" x="119" y="0.0" width="238" height="104"/>
@@ -98,6 +94,7 @@
                             <constraint firstItem="zLr-hK-zLw" firstAttribute="leading" secondItem="htH-wS-6Yi" secondAttribute="trailing" id="BV7-eo-yrm"/>
                             <constraint firstAttribute="bottom" secondItem="zLr-hK-zLw" secondAttribute="bottom" id="God-Wd-9pc"/>
                             <constraint firstAttribute="trailing" secondItem="zLr-hK-zLw" secondAttribute="trailing" id="UL7-AL-dEq"/>
+                            <constraint firstAttribute="bottom" secondItem="htH-wS-6Yi" secondAttribute="bottom" id="ZDe-oF-ecR"/>
                             <constraint firstItem="zLr-hK-zLw" firstAttribute="top" secondItem="XEJ-Yi-LpM" secondAttribute="top" id="jTZ-ci-4OE"/>
                             <constraint firstItem="htH-wS-6Yi" firstAttribute="leading" secondItem="XEJ-Yi-LpM" secondAttribute="leading" id="upP-QK-Ep9"/>
                         </constraints>
