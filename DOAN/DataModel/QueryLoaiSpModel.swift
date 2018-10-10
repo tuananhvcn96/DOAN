@@ -6,8 +6,9 @@
 //  Copyright © 2018 Tuan Anh. All rights reserved.
 //
 
-import Foundation
+
 import UIKit
+import FMDB
 
 let sharedInstance = QueryLoaiSpModel()
 
@@ -29,6 +30,15 @@ class QueryLoaiSpModel : NSObject {
         sharedInstance.database!.open()
         let isInserted = sharedInstance.database!.executeUpdate("INSERT INTO LoaiSanPham(tensanpham,motasanpham,hinhanh) VALUES (?,?,?)",
                                                                 withArgumentsIn: [loaisp.tensp,loaisp.motasp,loaisp.hinhanh])
+        
+        sharedInstance.database!.close()
+        return isInserted
+    }
+    
+    func insertUser(_ user: User) -> Bool {
+        sharedInstance.database!.open()
+        let isInserted = sharedInstance.database!.executeUpdate("INSERT INTO User(iduser,name,username,password,email) VALUES (?,?,?,?,?)",
+                                                                withArgumentsIn: [user.iduser,user.name,user.username,user.password,user.email])
         
         sharedInstance.database!.close()
         return isInserted
@@ -71,6 +81,27 @@ class QueryLoaiSpModel : NSObject {
         }
         sharedInstance.database!.close()
         return itemProduct
+    }
+    
+    func getAllUser() -> [User] {
+        sharedInstance.database!.open()
+        
+        let resultSet: FMResultSet! = sharedInstance.database!.executeQuery("SELECT * FROM User", withArgumentsIn: [0])
+        
+        var itemUser: [User] = []
+        if (resultSet != nil) {
+            while resultSet.next() {
+                let item: User = User()
+                item.iduser = Int(resultSet.int(forColumn: "iduser"))
+                item.name = String(resultSet.string(forColumn: "name")!)
+                item.username = String(resultSet.string(forColumn: "username")!)
+                item.password = String(resultSet.string(forColumn: "password")!)
+                item.email = String(resultSet.string(forColumn: "email")!)
+                itemUser.append(item)
+            }
+        }
+        sharedInstance.database!.close()
+        return itemUser
     }
     
     func getAllCart() -> [Cart] {
