@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController: UIViewController, UITextFieldDelegate {
 
     static let iddentifer = "RegistrationViewController"
     
@@ -24,10 +24,19 @@ class RegistrationViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.setupUIView()
+        nameTF.delegate = self
+        emailTF.delegate = self
+        usernameTF.delegate = self
+        passwordTF.delegate = self
     }
     
     func setupUIView() {
         nameUIView.setBorder(radius: 7, color: UIColor.white)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true;
     }
     
     @IBAction func tap(_ sender: Any) {

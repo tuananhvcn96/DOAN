@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol LoginWithDelegate {
+protocol LoginWithDelegate: class {
     func checkSuccess(text: String, itemData: User)
 }
 
@@ -23,8 +23,9 @@ class LoginWithViewController: UIViewController,UITextViewDelegate {
     @IBOutlet weak var usernameTextView: UITextView!
     @IBOutlet weak var passwordTextView: UITextView!
     var userInfo = [User]()
-    var delegate: LoginWithDelegate?
+    weak var delegate: LoginWithDelegate?
     var itemUser: User?
+    static let identifier = "LoginWithViewController"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +41,21 @@ class LoginWithViewController: UIViewController,UITextViewDelegate {
         passwordTextView.delegate = self
         
         userInfo = QueryLoaiSpModel.getInstance().getAllUser()
+    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false )
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     func checkUser()  {
@@ -52,12 +67,18 @@ class LoginWithViewController: UIViewController,UITextViewDelegate {
         let passData = user.password
         if userName == userData && passWord == passData {
             UI.aLert(ui: self, title: "Thông báo", message: "Thành Công") { (unowned) in
-                //let stroryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                guard let myVC = self.storyboard?.instantiateViewController(withIdentifier: MainController.identifier) else { return }
+                guard let myVC = self.storyboard?.instantiateViewController(withIdentifier: MenuViewController.identifier) else { return }
                 let navController = UINavigationController(rootViewController: myVC)
-                
-                self.present(navController, animated: true, completion: nil)
-                
+
+                //self.present(navController, animated: true, completion: )
+                self.present(navController, animated: true, completion: {
+
+                })
+//                self.navigationController?.popViewController(animated: true)
+//                
+//                self.dismiss(animated: true, completion: {
+//                    self.delegate?.checkSuccess(text: userName, itemData: user)
+//                })
             }
         } else {
             UI.ALert(ui: self, title: "Kiểm tra", message: "Sai Mật Khẩu")

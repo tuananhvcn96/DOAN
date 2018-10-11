@@ -19,12 +19,12 @@ class MainController: UIViewController {
     var id: Int?
     static let identifier = "MainController"
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.setupNavigationBar()
         self.setupCollectionView()
+        
     }
     
     func setupNavigationBar(){

@@ -1,4 +1,4 @@
-//
+    //
 //  MenuViewController.swift
 //  DOAN
 //
@@ -10,10 +10,13 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageViewProfile: UIImageView!
     var menuNameArr: Array = [String]()
     var iconImage: Array = [UIImage]()
     @IBOutlet weak var helloLbl: UILabel!
+    var tenUser: String = ""
+    static let identifier = "MenuViewController"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +29,24 @@ class MenuViewController: UIViewController {
         imageViewProfile.layer.cornerRadius = 20
         imageViewProfile.layer.masksToBounds = false
         imageViewProfile.clipsToBounds = true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == LoginWithViewController.identifier {
+            let vc = segue.destination as! LoginWithViewController
+            vc.delegate = self
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        helloLbl.text = self.tenUser
+    }
+}
+
+extension MenuViewController: LoginWithDelegate {
+    func checkSuccess(text: String, itemData: User) {
+        self.tenUser = text
     }
 }
 
@@ -73,6 +94,19 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         if cell.lblMenuName.text == "Login" {
             let mainStroryboarb: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let desController = mainStroryboarb.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            
+            if self.tenUser.isEmpty {
+                helloLbl.text! = self.tenUser
+            }
+            
+            let newFrontViewController = UINavigationController.init(rootViewController: desController)
+            
+            revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+        }
+        if cell.lblMenuName.text == "Phone" {
+            let mainStroryboarb: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let desController = mainStroryboarb.instantiateViewController(withIdentifier: "LoginWithViewController") as! LoginWithViewController
+          
             
             let newFrontViewController = UINavigationController.init(rootViewController: desController)
             

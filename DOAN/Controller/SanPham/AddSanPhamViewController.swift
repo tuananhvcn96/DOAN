@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddSanPhamViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddSanPhamViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate {
     @IBOutlet weak var buttonBar: UIBarButtonItem!
     @IBOutlet weak var nameSPLbl: UITextField!
     @IBOutlet weak var noteLbl: UITextField!
@@ -27,6 +27,16 @@ class AddSanPhamViewController: UIViewController, UIImagePickerControllerDelegat
         // Do any additional setup after loading the view.
         buttonBar.target = revealViewController()
         buttonBar.action = #selector(SWRevealViewController.revealToggle(_:))
+        
+        nameSPLbl.delegate = self
+        noteLbl.delegate = self
+        inputpriceLbl.delegate = self
+        priceLbl.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true;
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,7 +94,6 @@ class AddSanPhamViewController: UIViewController, UIImagePickerControllerDelegat
         } else {
             Util.invokeAlertMethod(strTitle: "", strBody: "Thêm thất bại", delegate: nil)
         }
-       
     }
 }
 

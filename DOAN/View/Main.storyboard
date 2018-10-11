@@ -180,6 +180,7 @@
                     <connections>
                         <outlet property="helloLbl" destination="qp2-jF-evu" id="fg2-N9-Dif"/>
                         <outlet property="imageViewProfile" destination="jrn-xM-gXo" id="B8V-2L-hHi"/>
+                        <outlet property="tableView" destination="jHo-Mr-DT2" id="tDp-Nu-sMq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qPc-50-Wdz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1062,11 +1063,11 @@
             <objects>
                 <viewController storyboardIdentifier="LoginWithViewController" id="zHd-4h-6R7" customClass="LoginWithViewController" customModule="DOAN" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="urG-eZ-98p">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwW-Jf-l1h">
-                                <rect key="frame" x="28" y="297" width="315" height="196"/>
+                                <rect key="frame" x="28" y="277" width="315" height="196"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30q-33-urj">
                                         <rect key="frame" x="0.0" y="146" width="315" height="50"/>
@@ -1137,7 +1138,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nK9-8V-tPU">
-                                <rect key="frame" x="130" y="74" width="114.5" height="114"/>
+                                <rect key="frame" x="130" y="54" width="114.5" height="114"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LITTLE COFFEE SHOP" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fV-vo-xDV">
                                         <rect key="frame" x="10" y="10" width="94.5" height="94"/>
@@ -1153,7 +1154,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5RP-kW-HPR">
-                                <rect key="frame" x="28" y="529" width="315" height="116"/>
+                                <rect key="frame" x="28" y="509" width="315" height="116"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjl-0F-Tlb">
                                         <rect key="frame" x="24" y="20" width="266" height="25"/>
@@ -1247,6 +1248,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bri-Li-rdw"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="fabebookUIView" destination="yfp-uT-lD9" id="wPk-S5-eyP"/>
                         <outlet property="nameShowUIView" destination="nK9-8V-tPU" id="icp-z1-n9y"/>
@@ -1260,7 +1262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hux-JS-vZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2474.4000000000001" y="2515.5922038980511"/>
+            <point key="canvasLocation" x="2546" y="2516"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="QmS-tg-hPh">

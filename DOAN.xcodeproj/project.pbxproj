@@ -422,7 +422,6 @@
 				CC2D0CE8211A95C400B47377 /* Sources */,
 				CC2D0CE9211A95C400B47377 /* Frameworks */,
 				CC2D0CEA211A95C400B47377 /* Resources */,
-				0DB8712111F0F6B2EEB85FB8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -486,24 +485,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0DB8712111F0F6B2EEB85FB8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DOAN/Pods-DOAN-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DOAN/Pods-DOAN-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E514F8B9601E305F16EF5DA0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
