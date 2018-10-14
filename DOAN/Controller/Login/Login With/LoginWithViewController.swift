@@ -67,20 +67,16 @@ class LoginWithViewController: UIViewController,UITextViewDelegate {
         let passData = user.password
         if userName == userData && passWord == passData {
             UI.aLert(ui: self, title: "Thông báo", message: "Thành Công") { (unowned) in
-                guard let myVC = self.storyboard?.instantiateViewController(withIdentifier: MenuViewController.identifier) else { return }
-                let navController = UINavigationController(rootViewController: myVC)
-
-                //self.present(navController, animated: true, completion: )
-                self.present(navController, animated: true, completion: {
-
+                self.dismiss(animated: true, completion: {
+                    //self.delegate?.checkSuccess(text: userName, itemData: user)
+                    
                 })
-//                self.navigationController?.popViewController(animated: true)
-//                
-//                self.dismiss(animated: true, completion: {
-//                    self.delegate?.checkSuccess(text: userName, itemData: user)
-//                })
             }
+            UserDefaults.standard.set(userData, forKey: "ok")
+            UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
+            UserDefaults.standard.synchronize()
         } else {
+
             UI.ALert(ui: self, title: "Kiểm tra", message: "Sai Mật Khẩu")
         }
     }

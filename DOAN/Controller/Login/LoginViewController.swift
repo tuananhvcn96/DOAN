@@ -14,16 +14,27 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var uiviewLabelCentre: UIView!
     @IBOutlet weak var uiviewSignUp: UIView!
     @IBOutlet weak var uiviewSignFace: UIView!
-    
+    @IBOutlet weak var nameHelloLabel: UILabel!
+    var tenUser: String = ""
+    var name = UserDefaults.standard.string(forKey: "ok")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserDefaults.standard.synchronize()
 
         // Do any additional setup after loading the view.
         buttonBar.target = revealViewController()
         buttonBar.action = #selector(SWRevealViewController.revealToggle(_:))
         self.setupBorder()
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(true)
+//        
+//        if !(self.name?.isEmpty)! {
+//            nameHelloLabel.text = "Xin Chào \(String(describing: name!))"
+//        }
+//    }
 
     func setupBorder(){
         uiviewLabelCentre.setBorder(radius: 7, color: UIColor.white)
@@ -32,6 +43,10 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func tapSignUp(_ sender: Any) {
+        let stroryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = stroryboard.instantiateViewController(withIdentifier: LoginWithViewController.identifier) as! LoginWithViewController
+        //vc.delegate = self
+        self.present(vc, animated: true, completion: nil)
     }
     @IBAction func tapSignUpFace(_ sender: Any) {
     }
@@ -43,3 +58,12 @@ class LoginViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
 }
+
+//extension LoginViewController: LoginWithDelegate {
+//    func checkSuccess(text: String, itemData: User) {
+//        self.tenUser = text
+//        if !self.tenUser.isEmpty {
+//            nameHelloLabel.text = "Xin Chào \(self.tenUser)"
+//        }
+//    }
+//}

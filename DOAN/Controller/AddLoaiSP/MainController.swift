@@ -42,6 +42,10 @@ class MainController: UIViewController {
         mainCollectionView.reloadData()
     }
     
+    @IBAction func slideBar(_ sender: Any) {
+        btnMenuBar.target = revealViewController()
+        btnMenuBar.action = #selector(SWRevealViewController.revealToggle(_:))
+    }
     @IBAction func onTapAddProduct(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: AddTypeProductViewController.identifier) as? AddTypeProductViewController
         let navigationController = UINavigationController(rootViewController: vc!)

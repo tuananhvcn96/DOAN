@@ -12,10 +12,13 @@ class MenuViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageViewProfile: UIImageView!
+    @IBOutlet weak var helloLbl: UILabel!
+    @IBOutlet weak var buttonThoat: UIButton!
+    
     var menuNameArr: Array = [String]()
     var iconImage: Array = [UIImage]()
-    @IBOutlet weak var helloLbl: UILabel!
     var tenUser: String = ""
+    var name = UserDefaults.standard.string(forKey: "ok")
     static let identifier = "MenuViewController"
     
     override func viewDidLoad() {
@@ -31,24 +34,30 @@ class MenuViewController: UIViewController {
         imageViewProfile.clipsToBounds = true
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == LoginWithViewController.identifier {
-            let vc = segue.destination as! LoginWithViewController
-            vc.delegate = self
-        }
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         helloLbl.text = self.tenUser
+        if !(self.name?.isEmpty)! {
+            helloLbl.text = "Xin Chào \(String(describing: name!))"
+        }
     }
+    
+    @IBAction func btnThoat(_ sender: UIButton) {
+        let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
+        if  isUserLoggedIn {
+            helloLbl.text = "Xin Chào Ngài"
+            UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
 }
 
-extension MenuViewController: LoginWithDelegate {
-    func checkSuccess(text: String, itemData: User) {
-        self.tenUser = text
-    }
-}
+//extension MenuViewController: LoginWithDelegate {
+//    func checkSuccess(text: String, itemData: User) {
+//        self.tenUser = text
+//    }
+//}
 
 extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -94,10 +103,6 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         if cell.lblMenuName.text == "Login" {
             let mainStroryboarb: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let desController = mainStroryboarb.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-            
-            if self.tenUser.isEmpty {
-                helloLbl.text! = self.tenUser
-            }
             
             let newFrontViewController = UINavigationController.init(rootViewController: desController)
             

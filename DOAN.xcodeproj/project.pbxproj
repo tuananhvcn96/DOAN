@@ -57,6 +57,7 @@
 		CCCF93A52132FF10009EF093 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF93A42132FF10009EF093 /* MenuViewController.swift */; };
 		CCCF93A72132FF46009EF093 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF93A62132FF46009EF093 /* MenuTableViewCell.swift */; };
 		CCCF93A921330C28009EF093 /* AllProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF93A821330C28009EF093 /* AllProductViewController.swift */; };
+		CCEE1F4A2173A9D000DCADA5 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEE1F492173A9D000DCADA5 /* UserViewController.swift */; };
 		E7EF9A4225AD5DFFF438D4B8 /* Pods_DOAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F05C0A63DB791273EAA605F0 /* Pods_DOAN.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +123,7 @@
 		CCCF93A42132FF10009EF093 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		CCCF93A62132FF46009EF093 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		CCCF93A821330C28009EF093 /* AllProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllProductViewController.swift; sourceTree = "<group>"; };
+		CCEE1F492173A9D000DCADA5 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		DDC23C7DF459EFB5BBC365BC /* Pods-DOAN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DOAN.release.xcconfig"; path = "Pods/Target Support Files/Pods-DOAN/Pods-DOAN.release.xcconfig"; sourceTree = "<group>"; };
 		F05C0A63DB791273EAA605F0 /* Pods_DOAN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DOAN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -305,6 +307,7 @@
 		CC2D0D09211A9A3E00B47377 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CCEE1F482173A9A300DCADA5 /* Users */,
 				AA80A9F2216C93A2006811DA /* Registr */,
 				AA00B18A216B0CA600DC9641 /* Login */,
 				AA9923EC216600BC005B408E /* Cart */,
@@ -411,6 +414,14 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
+		CCEE1F482173A9A300DCADA5 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				CCEE1F492173A9D000DCADA5 /* UserViewController.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -511,6 +522,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA0C625C2141240E0070ACC2 /* UI.swift in Sources */,
+				CCEE1F4A2173A9D000DCADA5 /* UserViewController.swift in Sources */,
 				CCCF93A52132FF10009EF093 /* MenuViewController.swift in Sources */,
 				AA80A9F4216C93C0006811DA /* RegistrationViewController.swift in Sources */,
 				AABDC3AD21462342003873CC /* SanPham+CoreDataClass.swift in Sources */,
@@ -690,7 +702,10 @@
 				DEVELOPMENT_TEAM = 94T6H355HB;
 				INFOPLIST_FILE = DOAN/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Tuan-Anh.DOAN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DOAN/Library/DOAN-Bridging-Header.h";
@@ -710,7 +725,10 @@
 				DEVELOPMENT_TEAM = 94T6H355HB;
 				INFOPLIST_FILE = DOAN/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Tuan-Anh.DOAN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DOAN/Library/DOAN-Bridging-Header.h";
