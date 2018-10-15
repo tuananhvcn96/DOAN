@@ -32,6 +32,8 @@
 		AABDC43E21538710003873CC /* DetailProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC43D21538710003873CC /* DetailProductViewController.swift */; };
 		AABDC445215387AD003873CC /* DetailProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDC443215387AD003873CC /* DetailProductTableViewCell.swift */; };
 		AABDC446215387AD003873CC /* DetailProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AABDC444215387AD003873CC /* DetailProductTableViewCell.xib */; };
+		AAC5B9E12174401A008F4F39 /* ShadowableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC5B9E02174401A008F4F39 /* ShadowableView.swift */; };
+		AAC5B9E6217448A2008F4F39 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC5B9E5217448A2008F4F39 /* UserInfoViewController.swift */; };
 		CC2D0CF0211A95C400B47377 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2D0CEF211A95C400B47377 /* AppDelegate.swift */; };
 		CC2D0CF2211A95C400B47377 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2D0CF1211A95C400B47377 /* MainController.swift */; };
 		CC2D0CF8211A95C400B47377 /* DOAN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC2D0CF6211A95C400B47377 /* DOAN.xcdatamodeld */; };
@@ -88,6 +90,8 @@
 		AABDC43D21538710003873CC /* DetailProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductViewController.swift; sourceTree = "<group>"; };
 		AABDC443215387AD003873CC /* DetailProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductTableViewCell.swift; sourceTree = "<group>"; };
 		AABDC444215387AD003873CC /* DetailProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailProductTableViewCell.xib; sourceTree = "<group>"; };
+		AAC5B9E02174401A008F4F39 /* ShadowableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowableView.swift; sourceTree = "<group>"; };
+		AAC5B9E5217448A2008F4F39 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		CC2D0CEC211A95C400B47377 /* DOAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DOAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC2D0CEF211A95C400B47377 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC2D0CF1211A95C400B47377 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 				AA0C625B2141240E0070ACC2 /* UI.swift */,
 				CC4B82F1214D232400964A9A /* Util.swift */,
 				AA00B18D216B11C300DC9641 /* Extension.swift */,
+				AAC5B9E02174401A008F4F39 /* ShadowableView.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -257,6 +262,14 @@
 			path = MenuBar;
 			sourceTree = "<group>";
 		};
+		AAC5B9E421744886008F4F39 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				AAC5B9E5217448A2008F4F39 /* UserInfoViewController.swift */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
 		CC2D0CE3211A95C400B47377 = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +320,7 @@
 		CC2D0D09211A9A3E00B47377 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AAC5B9E421744886008F4F39 /* UserInfo */,
 				CCEE1F482173A9A300DCADA5 /* Users */,
 				AA80A9F2216C93A2006811DA /* Registr */,
 				AA00B18A216B0CA600DC9641 /* Login */,
@@ -522,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA0C625C2141240E0070ACC2 /* UI.swift in Sources */,
+				AAC5B9E6217448A2008F4F39 /* UserInfoViewController.swift in Sources */,
 				CCEE1F4A2173A9D000DCADA5 /* UserViewController.swift in Sources */,
 				CCCF93A52132FF10009EF093 /* MenuViewController.swift in Sources */,
 				AA80A9F4216C93C0006811DA /* RegistrationViewController.swift in Sources */,
@@ -543,6 +558,7 @@
 				AA0C62582140E99E0070ACC2 /* DB.swift in Sources */,
 				AABDC3AB21462342003873CC /* LoaiSanPham+CoreDataClass.swift in Sources */,
 				AABDC43E21538710003873CC /* DetailProductViewController.swift in Sources */,
+				AAC5B9E12174401A008F4F39 /* ShadowableView.swift in Sources */,
 				AABDC3A621461711003873CC /* AddSanPhamViewController.swift in Sources */,
 				AABDC4392151FDF5003873CC /* SanPham.swift in Sources */,
 				AA9923F1216603A2005B408E /* CartViewCell.swift in Sources */,
