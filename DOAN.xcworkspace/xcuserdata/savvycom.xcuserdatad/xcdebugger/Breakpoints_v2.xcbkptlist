@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DOAN/Controller/MenuBar/MenuViewController.swift"
-            timestampString = "560948903.133597"
+            filePath = "DOAN/Controller/Login/Login With/LoginWithViewController.swift"
+            timestampString = "561381869.29284"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "viewWillAppear(_:)"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "checkUser()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DOAN/Controller/MenuBar/MenuViewController.swift"
-            timestampString = "560948903.133738"
+            filePath = "DOAN/Controller/Login/Login With/LoginWithViewController.swift"
+            timestampString = "561381869.293309"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "checkSuccess(text:itemData:)"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "checkUser()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

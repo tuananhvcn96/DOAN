@@ -36,10 +36,10 @@ class MenuViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        helloLbl.text = self.tenUser
         if !(self.name?.isEmpty)! {
             helloLbl.text = "Xin Chào \(String(describing: name!))"
         }
+
     }
     
     @IBAction func btnThoat(_ sender: UIButton) {

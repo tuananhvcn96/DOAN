@@ -67,11 +67,19 @@ class LoginWithViewController: UIViewController,UITextViewDelegate {
         let passData = user.password
         if userName == userData && passWord == passData {
             UI.aLert(ui: self, title: "Thông báo", message: "Thành Công") { (unowned) in
-                self.dismiss(animated: true, completion: {
-                    //self.delegate?.checkSuccess(text: userName, itemData: user)
+                DispatchQueue.main.async {
+                    let revealViewController: SWRevealViewController = self.revealViewController()
+                    let mainStroryboarb: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let desController = mainStroryboarb.instantiateViewController(withIdentifier: "MainController") as! MainController
                     
-                })
+                    let newFrontViewController = UINavigationController.init(rootViewController: desController)
+                    
+                    revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+                }
             }
+            //self.delegate?.checkSuccess(text: userName, itemData: user)
+
+            
             UserDefaults.standard.set(userData, forKey: "ok")
             UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
             UserDefaults.standard.synchronize()
