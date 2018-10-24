@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AllProductViewController: UIViewController {
+class ListPromotionViewController: UIViewController {
 
     @IBOutlet weak var btnMenuItem: UIBarButtonItem!
     override func viewDidLoad() {

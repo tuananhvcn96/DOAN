@@ -20,7 +20,6 @@ class DetailProductViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tableView.delegate = self
         // Do any additional setup after loading the view.
         navigationItem.leftBarButtonItem = navigationLefBarItem()
         product = QueryLoaiSpModel.getInstance().getAllDataProduct(id: id!)
@@ -47,7 +46,6 @@ class DetailProductViewController: UIViewController {
     
     @objc func onTapMenuBack() {
         self.dismiss(animated: true, completion: nil)
-        
         self.navigationController?.popViewController(animated: true)
     }
     

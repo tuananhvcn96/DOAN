@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
         let stroryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc = stroryboard.instantiateViewController(withIdentifier: LoginWithViewController.identifier) as! LoginWithViewController
         //vc.delegate = self
-        self.present(vc, animated: true, completion: nil)
+        navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func tapSignUpFace(_ sender: Any) {
     }

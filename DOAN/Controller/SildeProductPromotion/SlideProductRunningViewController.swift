@@ -8,8 +8,9 @@
 
 import UIKit
 
-class SlideProductRunningViewController: UIViewController {
+class SlideProductPromotionViewController: UIViewController {
 
+    @IBOutlet weak var buttonBar: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -17,20 +18,26 @@ class SlideProductRunningViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = "Sản Phẩm Bán Chạy"
         self.setupCollectionView()
         collectionView.showsHorizontalScrollIndicator = false
+        self.setupNavigationBar()
+    }
+    
+    func setupNavigationBar(){
+        buttonBar.target = revealViewController()
+        buttonBar.action = #selector(SWRevealViewController.revealToggle(_:))
+        self.title = "Sản phẩm khuyễn mãi"
         pageControl.numberOfPages = 5
     }
+
 
     func setupCollectionView() {
         let nib = UINib(nibName: "SlideProductRuningCollectionViewCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "SlideProductRuningCollectionViewCell")
 
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.minimumInteritemSpacing = 17
-        flowLayout.minimumLineSpacing = 34
-        flowLayout.sectionInset = UIEdgeInsets(top: 15, left: 25, bottom: 10, right: 25)
+        flowLayout.minimumLineSpacing = 50
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 25, bottom: 10, right: 25)
         flowLayout.invalidateLayout()
         
         flowLayout.scrollDirection = .horizontal
@@ -40,7 +47,7 @@ class SlideProductRunningViewController: UIViewController {
     }
 }
 
-extension SlideProductRunningViewController: UICollectionViewDataSource,UICollectionViewDelegate {
+extension SlideProductPromotionViewController: UICollectionViewDataSource,UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         let count = 5

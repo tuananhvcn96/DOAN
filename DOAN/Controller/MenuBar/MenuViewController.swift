@@ -23,7 +23,7 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        menuNameArr = ["Home", "AllProduct", "Product","Login","Phone"]
+        menuNameArr = ["Home", "Promotion", "Product","Login","Phone"]
         iconImage = [UIImage(named: "pic1")!,UIImage(named: "pic2")!,UIImage(named: "pic3")!,UIImage(named: "pic4")!,UIImage(named: "pic5")!]
         // Do any additional setup after loading the view.
         imageViewProfile.image = UIImage(named: "AppIcon-1")
@@ -39,18 +39,16 @@ class MenuViewController: UIViewController {
         if !(self.name?.isEmpty)! {
             helloLbl.text = "Xin Chào \(String(describing: name!))"
         }
-
     }
     
     @IBAction func btnThoat(_ sender: UIButton) {
         let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
-        if  isUserLoggedIn {
+        if !isUserLoggedIn {
             helloLbl.text = "Xin Chào Ngài"
             UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
             UserDefaults.standard.synchronize()
         }
     }
-    
 }
 
 //extension MenuViewController: LoginWithDelegate {
@@ -84,9 +82,9 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
             
             revealViewController.pushFrontViewController(newFrontViewController, animated: true)
         }
-        if cell.lblMenuName.text! == "AllProduct" {
+        if cell.lblMenuName.text! == "Promotion" {
             let mainStroryboarb: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let desController = mainStroryboarb.instantiateViewController(withIdentifier: "AllProductViewController") as! AllProductViewController
+            let desController = mainStroryboarb.instantiateViewController(withIdentifier: "SlideProductPromotionViewController") as! SlideProductPromotionViewController
             
             let newFrontViewController = UINavigationController.init(rootViewController: desController)
             

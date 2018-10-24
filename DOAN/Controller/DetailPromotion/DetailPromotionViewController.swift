@@ -98,7 +98,6 @@ class DetailPromotionViewController: UIViewController {
             
             _ = QueryLoaiSpModel.getInstance().updateCart(RecoreId: categoryName.id, soluong: itemUpdate.soluong)
 
-
             Util.invokeAlertMethod(strTitle: "", strBody: "recode updated !!", delegate: nil)
             print("\(listCart)")
         }
