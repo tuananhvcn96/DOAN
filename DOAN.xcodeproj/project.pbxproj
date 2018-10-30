@@ -43,12 +43,6 @@
 		CC2D0CFD211A95C600B47377 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2D0CFB211A95C600B47377 /* LaunchScreen.storyboard */; };
 		CC2D0D08211A97EB00B47377 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2D0D06211A97EB00B47377 /* SWRevealViewController.m */; };
 		CC4464AE213CDA0700AAA08E /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4464AD213CDA0700AAA08E /* AddProductViewController.swift */; };
-		CC4B82E4214D202800964A9A /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B82D9214D202800964A9A /* FMDatabaseQueue.m */; };
-		CC4B82E5214D202800964A9A /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B82DC214D202800964A9A /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		CC4B82E6214D202800964A9A /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B82DD214D202800964A9A /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		CC4B82E7214D202800964A9A /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B82E1214D202800964A9A /* FMDatabasePool.m */; };
-		CC4B82E8214D202800964A9A /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B82E2214D202800964A9A /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		CC4B82E9214D202800964A9A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC4B82E3214D202800964A9A /* Info.plist */; };
 		CC4B82ED214D204F00964A9A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4B82EB214D204F00964A9A /* AVFoundation.framework */; };
 		CC4B82EE214D204F00964A9A /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4B82EC214D204F00964A9A /* AVKit.framework */; };
 		CC4B82F0214D205600964A9A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4B82EF214D205600964A9A /* libsqlite3.0.tbd */; };
@@ -107,18 +101,6 @@
 		CC2D0D06211A97EB00B47377 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		CC2D0D07211A97EB00B47377 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		CC4464AD213CDA0700AAA08E /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
-		CC4B82D8214D202800964A9A /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		CC4B82D9214D202800964A9A /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		CC4B82DA214D202800964A9A /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		CC4B82DB214D202800964A9A /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		CC4B82DC214D202800964A9A /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		CC4B82DD214D202800964A9A /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		CC4B82DE214D202800964A9A /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		CC4B82DF214D202800964A9A /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
-		CC4B82E0214D202800964A9A /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		CC4B82E1214D202800964A9A /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		CC4B82E2214D202800964A9A /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		CC4B82E3214D202800964A9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC4B82EB214D204F00964A9A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CC4B82EC214D204F00964A9A /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		CC4B82EF214D205600964A9A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -316,7 +298,6 @@
 				AA0C62562140E97F0070ACC2 /* Helper */,
 				CC2D0D0B211A9A5F00B47377 /* Model */,
 				CC2D0D09211A9A3E00B47377 /* Controller */,
-				CC4B82D7214D202800964A9A /* fmdb */,
 				CC2D0CEF211A95C400B47377 /* AppDelegate.swift */,
 				CC2D0CF9211A95C600B47377 /* Assets.xcassets */,
 				CC2D0CFE211A95C600B47377 /* Info.plist */,
@@ -406,26 +387,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		CC4B82D7214D202800964A9A /* fmdb */ = {
-			isa = PBXGroup;
-			children = (
-				CC4B82D8214D202800964A9A /* FMDatabase.h */,
-				CC4B82D9214D202800964A9A /* FMDatabaseQueue.m */,
-				CC4B82DA214D202800964A9A /* FMResultSet.h */,
-				CC4B82DB214D202800964A9A /* FMDatabasePool.h */,
-				CC4B82DC214D202800964A9A /* FMDatabaseAdditions.m */,
-				CC4B82DD214D202800964A9A /* FMDatabase.m */,
-				CC4B82DE214D202800964A9A /* FMDatabaseQueue.h */,
-				CC4B82DF214D202800964A9A /* FMDB.h */,
-				CC4B82E0214D202800964A9A /* FMDatabaseAdditions.h */,
-				CC4B82E1214D202800964A9A /* FMDatabasePool.m */,
-				CC4B82E2214D202800964A9A /* FMResultSet.m */,
-				CC4B82E3214D202800964A9A /* Info.plist */,
-			);
-			name = fmdb;
-			path = "../../Desktop/FMDBDatabaseDemo-master/FMDBDatabase Demo 2/FMDBDatabase Demo/fmdb";
-			sourceTree = "<group>";
-		};
 		CC4B82EA214D204F00964A9A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,6 +430,7 @@
 				CC2D0CE8211A95C400B47377 /* Sources */,
 				CC2D0CE9211A95C400B47377 /* Frameworks */,
 				CC2D0CEA211A95C400B47377 /* Resources */,
+				995894C5570715861C4FA95D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -521,7 +483,6 @@
 				CC2D0CFD211A95C600B47377 /* LaunchScreen.storyboard in Resources */,
 				CC2D0CFA211A95C600B47377 /* Assets.xcassets in Resources */,
 				CC8EC47921368AB200E85496 /* MainCollectionViewCell.xib in Resources */,
-				CC4B82E9214D202800964A9A /* Info.plist in Resources */,
 				AABDC446215387AD003873CC /* DetailProductTableViewCell.xib in Resources */,
 				AA0C625A214114460070ACC2 /* Main.storyboard in Resources */,
 				AA653225217721FF00E856AF /* SlideProductRuningCollectionViewCell.xib in Resources */,
@@ -532,6 +493,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		995894C5570715861C4FA95D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DOAN/Pods-DOAN-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DOAN/Pods-DOAN-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E514F8B9601E305F16EF5DA0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -563,8 +542,6 @@
 				CCCF93A52132FF10009EF093 /* MenuViewController.swift in Sources */,
 				AA80A9F4216C93C0006811DA /* RegistrationViewController.swift in Sources */,
 				AABDC3AD21462342003873CC /* SanPham+CoreDataClass.swift in Sources */,
-				CC4B82E6214D202800964A9A /* FMDatabase.m in Sources */,
-				CC4B82E7214D202800964A9A /* FMDatabasePool.m in Sources */,
 				CC2D0CF2211A95C400B47377 /* MainController.swift in Sources */,
 				CC8EC4742136851E00E85496 /* QueryData.swift in Sources */,
 				AA65322A21773B3100E856AF /* Promotion.swift in Sources */,
@@ -572,7 +549,6 @@
 				CC4B82F6214D529E00964A9A /* LoaiSP.swift in Sources */,
 				AA6BF141215DD99800D23746 /* DetailPromotionViewController.swift in Sources */,
 				CC8EC47821368AB200E85496 /* MainCollectionViewCell.swift in Sources */,
-				CC4B82E8214D202800964A9A /* FMResultSet.m in Sources */,
 				CC4B82F8214D665500964A9A /* QueryLoaiSpModel.swift in Sources */,
 				CCCF93A72132FF46009EF093 /* MenuTableViewCell.swift in Sources */,
 				AABDC3AE21462342003873CC /* SanPham+CoreDataProperties.swift in Sources */,
@@ -596,11 +572,9 @@
 				CCCF93A921330C28009EF093 /* AllProductViewController.swift in Sources */,
 				AA00B18C216B0D6300DC9641 /* LoginViewController.swift in Sources */,
 				CC2D0CF8211A95C400B47377 /* DOAN.xcdatamodeld in Sources */,
-				CC4B82E5214D202800964A9A /* FMDatabaseAdditions.m in Sources */,
 				CC2D0CF0211A95C400B47377 /* AppDelegate.swift in Sources */,
 				CC2D0D08211A97EB00B47377 /* SWRevealViewController.m in Sources */,
 				AA06B59F215C7CEC000BC20E /* SlideProductRunningViewController.swift in Sources */,
-				CC4B82E4214D202800964A9A /* FMDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
