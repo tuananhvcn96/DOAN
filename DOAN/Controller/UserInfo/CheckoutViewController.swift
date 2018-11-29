@@ -25,7 +25,7 @@ class CheckoutViewController: UIViewController {
         // Do any additional setup after loading the view.
         title = "Check Out Cart"
         
-        setupNavigation()
+        setupLayout()
         setupToQuery()
     }
     
@@ -33,12 +33,12 @@ class CheckoutViewController: UIViewController {
         itemCart = QueryLoaiSpModel.getInstance().getAllCart()
     }
     
-    func setupNavigation(){
+    func setupLayout(){
         let cartButton = UIBarButtonItem(image: UIImage(named: "home30"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(CheckoutViewController.homeScreen))
         
         self.navigationItem.rightBarButtonItem = cartButton
         
-        totalCartAmount.text = "\(String(allProductTotal + deliveryPrice))"
+        //totalCartAmount.text = "\(String(allProductTotal + deliveryPrice))"
     }
     
     @objc func homeScreen(){

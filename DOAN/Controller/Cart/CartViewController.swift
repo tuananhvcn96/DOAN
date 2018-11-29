@@ -9,7 +9,7 @@
 import UIKit
 
 class CartViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var totalPrice: UILabel!
@@ -20,47 +20,46 @@ class CartViewController: UIViewController {
     var listCartItem = [Cart]()
     var totalQuantity = 0
     var totalAmontPrice = 0
-
+    var getAllListCartItem = NSMutableArray()
+    var quantityStepper: Int = 0
+    
     override func viewDidLoad() {
+        title = "Giỏ Hàng"
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        self.title = "Cart"
-        self.setupToQuery()
+        // Do any additional setup after loading the view.
         self.setupNavigationBar()
-        self.setupShowToQuantity()
-        self.setupTotalPrice()
+        self.tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.setupToQuery()
+        self.setupHoverQuantity()
+        self.setupTotalPrice()
         tableView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-//        let itemCart: [Cart] = []
-//
-//        do{
-//            let relusts = itemCart
-//            listCartItem = relusts
-//        } catch {
-//            print("Dữ liệu không được truy xuất")
-//        }
-//        for i in 0 ..< listCartItem.count {
-//            print("listItems\(i): \(listCartItem[i])")
-//        }
-        
-        
-        self.setupToQuery()
-        self.setupShowToQuantity()
-        tableView.reloadData()
+        //        let itemCart: [Cart] = []
+        //
+        //        do{
+        //            let relusts = itemCart
+        //            listCartItem = relusts
+        //        } catch {
+        //            print("Dữ liệu không được truy xuất")
+        //        }
+        //        for i in 0 ..< listCartItem.count {
+        //            print("listItems\(i): \(listCartItem[i])")
+        //        }
+       
     }
     
-    func setupShowToQuantity() {
+    func setupHoverQuantity(){
         var itemQuantity = 0
         for (Qty) in listCartItem {
-            let itemQty = Qty.soluong 
+            let itemQty = Qty.soluong
             itemQuantity = itemQuantity + itemQty
         }
         
@@ -68,11 +67,11 @@ class CartViewController: UIViewController {
         totalItems.text = String("Quantity: \(totalQuantity)")
         
 //        if itemQuantity != 0 && self.listCartItem.count > 0 {
-//            orderButton.backgroundColor
-//            self.orderButton.isEnabled = false
-//        } else {
 //
+//        } else {
+//            totalItems.text = "Quantity: 0"
 //        }
+        
         self.orderButton.isEnabled = (itemQuantity != 0 && self.listCartItem.count > 0)
     }
     
@@ -104,13 +103,6 @@ class CartViewController: UIViewController {
         navigationController?.show(homeScreen, sender: self)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "perform order" {
-            let checkoutScreen: CheckoutViewController = segue.destination as! CheckoutViewController
-            checkoutScreen.allProductTotal = totalAmontPrice
-        }
-    }
-    
 }
 
 extension CartViewController: UITableViewDelegate, UITableViewDataSource {
@@ -128,7 +120,8 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         
         let item = listCartItem[indexPath.row]
         cell.setupData(item)
-        
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
+
         cell.delegate = self
         
         return cell
@@ -142,13 +135,21 @@ extension CartViewController: CartViewCellDelegate {
         print("hover")
         
         _ = QueryLoaiSpModel.getInstance().deleteCart(RecoreId: indexPath!)
-        tableView.reloadData()
         listCartItem = QueryLoaiSpModel.getInstance().getAllCart()
+        
+        setupTotalPrice()
+        setupHoverQuantity()
+        
+        tableView.reloadData()
     }
     
-    func CartViewCellDelegate(_ cell: CartViewCell, quantity: Int, itemUpdate: Cart) {
+    func cartViewCellDelegate(_ cell: CartViewCell, quantity: Int, itemUpdate: Cart) {
+        self.totalItems.text = "Quantity: \(quantity)"
         
     }
+    
+    
+    
 }
 
 

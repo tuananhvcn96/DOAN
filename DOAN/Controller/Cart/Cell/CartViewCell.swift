@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CartViewCellDelegate {
-    func CartViewCellDelegate(_ cell: CartViewCell, quantity: Int, itemUpdate: Cart)
+    func cartViewCellDelegate(_ cell: CartViewCell, quantity: Int, itemUpdate: Cart)
     func deleteButton(sender: CartViewCell)
 }
 
@@ -23,6 +23,7 @@ class CartViewCell: UITableViewCell {
     
     var delegate: CartViewCellDelegate?
     var itemCart: Cart?
+    var purchaseMax = 10
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,13 +49,14 @@ class CartViewCell: UITableViewCell {
         productImageView.image = UIImage(data: images as Data)
         
         itemCart = item
-        
     }
 
     @IBAction func stepperValueChanged(_ sender: AnyObject) {
-        let value = Int(productStepper!.value)
-        self.setupItemQuantity(value)
+        let value = Int(productStepper.value)
+        productStepper.maximumValue = value >= purchaseMax ? productStepper.value: Double(purchaseMax)
         
+        self.setupItemQuantity(value)
+        print(value)
     }
     
     func setupItemQuantity(_ quantity: Int){
@@ -64,7 +66,7 @@ class CartViewCell: UITableViewCell {
         productStepper.value = Double(quantity)
         
         if (delegate != nil) {
-            delegate?.CartViewCellDelegate(self, quantity: quantity, itemUpdate: itemCart!)
+            delegate?.cartViewCellDelegate(self, quantity: quantity, itemUpdate: itemCart!)
         }
     }
     
