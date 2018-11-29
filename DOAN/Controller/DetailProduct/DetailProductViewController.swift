@@ -21,6 +21,7 @@ class DetailProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.title = "Product Type"
         navigationItem.leftBarButtonItem = navigationLefBarItem()
         product = QueryLoaiSpModel.getInstance().getAllDataProduct(id: id!)
         self.setupTableView()

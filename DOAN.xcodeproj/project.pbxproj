@@ -36,6 +36,9 @@
 		AABDC446215387AD003873CC /* DetailProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AABDC444215387AD003873CC /* DetailProductTableViewCell.xib */; };
 		AAC5B9E12174401A008F4F39 /* ShadowableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC5B9E02174401A008F4F39 /* ShadowableView.swift */; };
 		AAC5B9E6217448A2008F4F39 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC5B9E5217448A2008F4F39 /* UserInfoViewController.swift */; };
+		CC1903DB21A5144E0024ECE7 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1903DA21A5144E0024ECE7 /* FavoritesViewController.swift */; };
+		CC1903DF21A514960024ECE7 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1903DD21A514960024ECE7 /* FavoritesTableViewCell.swift */; };
+		CC1903E021A514960024ECE7 /* FavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC1903DE21A514960024ECE7 /* FavoritesTableViewCell.xib */; };
 		CC2D0CF0211A95C400B47377 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2D0CEF211A95C400B47377 /* AppDelegate.swift */; };
 		CC2D0CF2211A95C400B47377 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2D0CF1211A95C400B47377 /* MainController.swift */; };
 		CC2D0CF8211A95C400B47377 /* DOAN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC2D0CF6211A95C400B47377 /* DOAN.xcdatamodeld */; };
@@ -55,7 +58,11 @@
 		CCCF93A52132FF10009EF093 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF93A42132FF10009EF093 /* MenuViewController.swift */; };
 		CCCF93A72132FF46009EF093 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF93A62132FF46009EF093 /* MenuTableViewCell.swift */; };
 		CCCF93A921330C28009EF093 /* AllProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF93A821330C28009EF093 /* AllProductViewController.swift */; };
+		CCD154E12191FB3E00B375B9 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD154E02191FB3E00B375B9 /* PaymentViewController.swift */; };
 		CCEE1F4A2173A9D000DCADA5 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEE1F492173A9D000DCADA5 /* UserViewController.swift */; };
+		CCF1693D218F381400795713 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF1693C218F381400795713 /* CheckoutViewController.swift */; };
+		CCF16940218F386700795713 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF1693F218F386700795713 /* AddressViewController.swift */; };
+		CCF16943218FCAEA00795713 /* CheckoutViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF16942218FCAEA00795713 /* CheckoutViewCell.swift */; };
 		E7EF9A4225AD5DFFF438D4B8 /* Pods_DOAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F05C0A63DB791273EAA605F0 /* Pods_DOAN.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +97,9 @@
 		AABDC444215387AD003873CC /* DetailProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailProductTableViewCell.xib; sourceTree = "<group>"; };
 		AAC5B9E02174401A008F4F39 /* ShadowableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowableView.swift; sourceTree = "<group>"; };
 		AAC5B9E5217448A2008F4F39 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		CC1903DA21A5144E0024ECE7 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		CC1903DD21A514960024ECE7 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		CC1903DE21A514960024ECE7 /* FavoritesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesTableViewCell.xib; sourceTree = "<group>"; };
 		CC2D0CEC211A95C400B47377 /* DOAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DOAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC2D0CEF211A95C400B47377 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC2D0CF1211A95C400B47377 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -110,10 +120,15 @@
 		CC8EC4732136851E00E85496 /* QueryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryData.swift; sourceTree = "<group>"; };
 		CC8EC47621368AB200E85496 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		CC8EC47721368AB200E85496 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
+		CCCEA41D21A9D6E8001CEB71 /* DOAN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DOAN.entitlements; sourceTree = "<group>"; };
 		CCCF93A42132FF10009EF093 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		CCCF93A62132FF46009EF093 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		CCCF93A821330C28009EF093 /* AllProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllProductViewController.swift; sourceTree = "<group>"; };
+		CCD154E02191FB3E00B375B9 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		CCEE1F492173A9D000DCADA5 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		CCF1693C218F381400795713 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheckoutViewController.swift; path = DOAN/Controller/UserInfo/CheckoutViewController.swift; sourceTree = SOURCE_ROOT; };
+		CCF1693F218F386700795713 /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
+		CCF16942218FCAEA00795713 /* CheckoutViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewCell.swift; sourceTree = "<group>"; };
 		DDC23C7DF459EFB5BBC365BC /* Pods-DOAN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DOAN.release.xcconfig"; path = "Pods/Target Support Files/Pods-DOAN/Pods-DOAN.release.xcconfig"; sourceTree = "<group>"; };
 		F05C0A63DB791273EAA605F0 /* Pods_DOAN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DOAN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -180,11 +195,13 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		AA65322121771FE600E856AF /* ListPromotion */ = {
+		AA65322121771FE600E856AF /* Checkout */ = {
 			isa = PBXGroup;
 			children = (
+				CCF16941218FCADC00795713 /* Cell */,
+				CCF1693C218F381400795713 /* CheckoutViewController.swift */,
 			);
-			path = ListPromotion;
+			path = Checkout;
 			sourceTree = "<group>";
 		};
 		AA65322B21773F9F00E856AF /* AddPromotion */ = {
@@ -271,6 +288,24 @@
 			path = UserInfo;
 			sourceTree = "<group>";
 		};
+		CC1903D921A514200024ECE7 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				CC1903DC21A5147B0024ECE7 /* Cell */,
+				CC1903DA21A5144E0024ECE7 /* FavoritesViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		CC1903DC21A5147B0024ECE7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CC1903DD21A514960024ECE7 /* FavoritesTableViewCell.swift */,
+				CC1903DE21A514960024ECE7 /* FavoritesTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		CC2D0CE3211A95C400B47377 = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +327,7 @@
 		CC2D0CEE211A95C400B47377 /* DOAN */ = {
 			isa = PBXGroup;
 			children = (
+				CCCEA41D21A9D6E8001CEB71 /* DOAN.entitlements */,
 				CC8EC46A21367C0600E85496 /* DataModel */,
 				CC2D0D04211A976000B47377 /* Library */,
 				CC2D0D0C211A9A6700B47377 /* View */,
@@ -320,8 +356,11 @@
 		CC2D0D09211A9A3E00B47377 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CC1903D921A514200024ECE7 /* Favorites */,
+				CCD154DF2191FB1200B375B9 /* Payment */,
+				CCF1693E218F385200795713 /* AddressInfo */,
 				AA65322B21773F9F00E856AF /* AddPromotion */,
-				AA65322121771FE600E856AF /* ListPromotion */,
+				AA65322121771FE600E856AF /* Checkout */,
 				AAC5B9E421744886008F4F39 /* UserInfo */,
 				CCEE1F482173A9A300DCADA5 /* Users */,
 				AA80A9F2216C93A2006811DA /* Registr */,
@@ -411,12 +450,36 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
+		CCD154DF2191FB1200B375B9 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				CCD154E02191FB3E00B375B9 /* PaymentViewController.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
 		CCEE1F482173A9A300DCADA5 /* Users */ = {
 			isa = PBXGroup;
 			children = (
 				CCEE1F492173A9D000DCADA5 /* UserViewController.swift */,
 			);
 			path = Users;
+			sourceTree = "<group>";
+		};
+		CCF1693E218F385200795713 /* AddressInfo */ = {
+			isa = PBXGroup;
+			children = (
+				CCF1693F218F386700795713 /* AddressViewController.swift */,
+			);
+			path = AddressInfo;
+			sourceTree = "<group>";
+		};
+		CCF16941218FCADC00795713 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CCF16942218FCAEA00795713 /* CheckoutViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,6 +517,11 @@
 					CC2D0CEB211A95C400B47377 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -481,6 +549,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC2D0CFD211A95C600B47377 /* LaunchScreen.storyboard in Resources */,
+				CC1903E021A514960024ECE7 /* FavoritesTableViewCell.xib in Resources */,
 				CC2D0CFA211A95C600B47377 /* Assets.xcassets in Resources */,
 				CC8EC47921368AB200E85496 /* MainCollectionViewCell.xib in Resources */,
 				AABDC446215387AD003873CC /* DetailProductTableViewCell.xib in Resources */,
@@ -542,12 +611,15 @@
 				CCCF93A52132FF10009EF093 /* MenuViewController.swift in Sources */,
 				AA80A9F4216C93C0006811DA /* RegistrationViewController.swift in Sources */,
 				AABDC3AD21462342003873CC /* SanPham+CoreDataClass.swift in Sources */,
+				CC1903DB21A5144E0024ECE7 /* FavoritesViewController.swift in Sources */,
 				CC2D0CF2211A95C400B47377 /* MainController.swift in Sources */,
 				CC8EC4742136851E00E85496 /* QueryData.swift in Sources */,
 				AA65322A21773B3100E856AF /* Promotion.swift in Sources */,
+				CC1903DF21A514960024ECE7 /* FavoritesTableViewCell.swift in Sources */,
 				AA9923EE216602E5005B408E /* CartViewController.swift in Sources */,
 				CC4B82F6214D529E00964A9A /* LoaiSP.swift in Sources */,
 				AA6BF141215DD99800D23746 /* DetailPromotionViewController.swift in Sources */,
+				CCF16943218FCAEA00795713 /* CheckoutViewCell.swift in Sources */,
 				CC8EC47821368AB200E85496 /* MainCollectionViewCell.swift in Sources */,
 				CC4B82F8214D665500964A9A /* QueryLoaiSpModel.swift in Sources */,
 				CCCF93A72132FF46009EF093 /* MenuTableViewCell.swift in Sources */,
@@ -555,6 +627,7 @@
 				AA9923EB2163886C005B408E /* Cart.swift in Sources */,
 				AA0C62582140E99E0070ACC2 /* DB.swift in Sources */,
 				AA653224217721FF00E856AF /* SlideProductRuningCollectionViewCell.swift in Sources */,
+				CCF16940218F386700795713 /* AddressViewController.swift in Sources */,
 				AABDC3AB21462342003873CC /* LoaiSanPham+CoreDataClass.swift in Sources */,
 				AABDC43E21538710003873CC /* DetailProductViewController.swift in Sources */,
 				AAC5B9E12174401A008F4F39 /* ShadowableView.swift in Sources */,
@@ -564,11 +637,13 @@
 				CC4B82F2214D232400964A9A /* Util.swift in Sources */,
 				AABDC3AC21462342003873CC /* LoaiSanPham+CoreDataProperties.swift in Sources */,
 				AA80A9F8216CB15B006811DA /* User.swift in Sources */,
+				CCF1693D218F381400795713 /* CheckoutViewController.swift in Sources */,
 				AABDC445215387AD003873CC /* DetailProductTableViewCell.swift in Sources */,
 				CC4464AE213CDA0700AAA08E /* AddProductViewController.swift in Sources */,
 				AA00B18E216B11C300DC9641 /* Extension.swift in Sources */,
 				AA65322D2177401700E856AF /* AddPromotionProductViewController.swift in Sources */,
 				AA00B191216C8C7200DC9641 /* LoginWithViewController.swift in Sources */,
+				CCD154E12191FB3E00B375B9 /* PaymentViewController.swift in Sources */,
 				CCCF93A921330C28009EF093 /* AllProductViewController.swift in Sources */,
 				AA00B18C216B0D6300DC9641 /* LoginViewController.swift in Sources */,
 				CC2D0CF8211A95C400B47377 /* DOAN.xcdatamodeld in Sources */,
@@ -712,6 +787,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DOAN/DOAN.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94T6H355HB;
 				INFOPLIST_FILE = DOAN/Info.plist;
@@ -735,6 +811,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DOAN/DOAN.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94T6H355HB;
 				INFOPLIST_FILE = DOAN/Info.plist;

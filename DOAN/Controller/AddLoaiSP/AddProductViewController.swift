@@ -23,6 +23,7 @@ class AddTypeProductViewController : UIViewController, UIImagePickerControllerDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Add Type Product"
         self.setupData()
         navigationItem.rightBarButtonItem = navigationRightBarItem()
         navigationItem.leftBarButtonItem = navigationLefBarItem()

@@ -101,6 +101,9 @@ class LoginWithViewController: UIViewController,UITextViewDelegate {
     @IBAction func tapLogin(_ sender: Any) {
         self.checkUser()
     }
+    @IBAction func btnBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.text == "User Name"{

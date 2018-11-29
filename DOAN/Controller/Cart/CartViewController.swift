@@ -20,16 +20,15 @@ class CartViewController: UIViewController {
     var listCartItem = [Cart]()
     var totalQuantity = 0
     var totalAmontPrice = 0
-    var getAllListCartItem = NSMutableArray()
-    
-    override func viewDidLoad() {
-        title = "Giỏ Hàng"
-        super.viewDidLoad()
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        self.title = "Cart"
         self.setupToQuery()
         self.setupNavigationBar()
-        self.setupHoverQuantity()
+        self.setupShowToQuantity()
         self.setupTotalPrice()
     }
     
@@ -54,11 +53,11 @@ class CartViewController: UIViewController {
         
         
         self.setupToQuery()
-        self.setupHoverQuantity()
+        self.setupShowToQuantity()
         tableView.reloadData()
     }
     
-    func setupHoverQuantity(){
+    func setupShowToQuantity() {
         var itemQuantity = 0
         for (Qty) in listCartItem {
             let itemQty = Qty.soluong 
@@ -105,6 +104,13 @@ class CartViewController: UIViewController {
         navigationController?.show(homeScreen, sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "perform order" {
+            let checkoutScreen: CheckoutViewController = segue.destination as! CheckoutViewController
+            checkoutScreen.allProductTotal = totalAmontPrice
+        }
+    }
+    
 }
 
 extension CartViewController: UITableViewDelegate, UITableViewDataSource {
@@ -136,18 +142,13 @@ extension CartViewController: CartViewCellDelegate {
         print("hover")
         
         _ = QueryLoaiSpModel.getInstance().deleteCart(RecoreId: indexPath!)
-        
-        listCartItem = QueryLoaiSpModel.getInstance().getAllCart()
-        
         tableView.reloadData()
+        listCartItem = QueryLoaiSpModel.getInstance().getAllCart()
     }
     
     func CartViewCellDelegate(_ cell: CartViewCell, quantity: Int, itemUpdate: Cart) {
         
     }
-    
-    
-    
 }
 
 

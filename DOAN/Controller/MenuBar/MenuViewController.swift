@@ -23,7 +23,7 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        menuNameArr = ["Home", "Promotion", "Product","Login","Phone"]
+        menuNameArr = ["Home", "Promotion", "Product","Login","User"]
         iconImage = [UIImage(named: "pic1")!,UIImage(named: "pic2")!,UIImage(named: "pic3")!,UIImage(named: "pic4")!,UIImage(named: "pic5")!]
         // Do any additional setup after loading the view.
         imageViewProfile.image = UIImage(named: "AppIcon-1")
@@ -36,9 +36,9 @@ class MenuViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        if !(self.name?.isEmpty)! {
-            helloLbl.text = "Xin Chào \(String(describing: name!))"
-        }
+//        if !(self.name?.isEmpty)! {
+//            helloLbl.text = "Xin Chào \(String(describing: name!))"
+//        }
     }
     
     @IBAction func btnThoat(_ sender: UIButton) {
@@ -73,6 +73,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let revealViewController: SWRevealViewController = self.revealViewController()
         let cell: MenuTableViewCell = tableView.cellForRow(at: indexPath) as! MenuTableViewCell
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         
         if cell.lblMenuName.text! == "Home" {
             let mainStroryboarb: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -106,9 +107,9 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
             
             revealViewController.pushFrontViewController(newFrontViewController, animated: true)
         }
-        if cell.lblMenuName.text == "Phone" {
+        if cell.lblMenuName.text == "User" {
             let mainStroryboarb: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let desController = mainStroryboarb.instantiateViewController(withIdentifier: "LoginWithViewController") as! LoginWithViewController
+            let desController = mainStroryboarb.instantiateViewController(withIdentifier: "UserViewController") as! UserViewController
           
             
             let newFrontViewController = UINavigationController.init(rootViewController: desController)

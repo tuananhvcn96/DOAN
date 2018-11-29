@@ -24,7 +24,13 @@ class MainController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.setupNavigationBar()
         self.setupCollectionView()
-        
+        if revealViewController() != nil {
+            btnMenuBar.target = self.revealViewController()
+            btnMenuBar.action = #selector(SWRevealViewController().revealToggle(_:))
+            
+            self.view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+        }
+        self.title = "Home"
     }
     
     func setupNavigationBar(){
@@ -49,16 +55,23 @@ class MainController: UIViewController {
     @IBAction func onTapAddProduct(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: AddTypeProductViewController.identifier) as? AddTypeProductViewController
         let navigationController = UINavigationController(rootViewController: vc!)
-        self.navigationController?.present(navigationController, animated: true, completion: {
-            
-        })
+        
+        DispatchQueue.main.async {
+            self.navigationController?.present(navigationController, animated: true, completion: nil)
+        }
     }
     @IBAction func onTapToCart(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: CartViewController.identifier) as? CartViewController
-        let navigationController = UINavigationController(rootViewController: vc!)
-        self.navigationController?.present(navigationController, animated: true, completion: {
-            
-        })
+        let revealViewController: SWRevealViewController = self.revealViewController()
+        let cartStroryboarb: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let cartController = cartStroryboarb.instantiateViewController(withIdentifier: CartViewController.identifier) as! CartViewController
+        
+        let newCartFrontVC = UINavigationController.init(rootViewController: cartController)
+        
+        DispatchQueue.main.async {
+            revealViewController.pushFrontViewController(newCartFrontVC, animated: true)
+            //UIApplication.shared.delegate!.window!!.rootViewController = newFrontViewController
+        }
+        
     }
     
     func setupCollectionView() {

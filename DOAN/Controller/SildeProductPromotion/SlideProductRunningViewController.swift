@@ -26,7 +26,7 @@ class SlideProductPromotionViewController: UIViewController {
     func setupNavigationBar(){
         buttonBar.target = revealViewController()
         buttonBar.action = #selector(SWRevealViewController.revealToggle(_:))
-        self.title = "Sản phẩm khuyễn mãi"
+        self.title = "Promotion Product"
         pageControl.numberOfPages = 5
     }
 

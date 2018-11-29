@@ -23,6 +23,13 @@ class LoginViewController: UIViewController {
         UserDefaults.standard.synchronize()
 
         // Do any additional setup after loading the view.
+        if revealViewController() != nil {
+            buttonBar.target = self.revealViewController()
+            buttonBar.action = #selector(SWRevealViewController().revealToggle(_:))
+            
+            self.view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+        }
+        
         buttonBar.target = revealViewController()
         buttonBar.action = #selector(SWRevealViewController.revealToggle(_:))
         self.setupBorder()
