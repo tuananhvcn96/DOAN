@@ -170,6 +170,10 @@ class QueryLoaiSpModel : NSObject {
         return itemInfo
     }
     
+//    func updateCartCell(id: Int, soluong: Int, giatien: Int) -> NSMutableArray {
+//        let resultSet: FMResultSet! = sharedInstance.database?.executeQuery("UPDATE Cart ", values: <#T##[Any]?#>)
+//    }
+    
     func deleteCart(RecoreId: Int) -> NSMutableArray {
         sharedInstance.database?.open()
         

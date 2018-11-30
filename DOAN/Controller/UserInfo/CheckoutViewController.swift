@@ -34,14 +34,14 @@ class CheckoutViewController: UIViewController {
     }
     
     func setupLayout(){
-        let cartButton = UIBarButtonItem(image: UIImage(named: "home30"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(CheckoutViewController.homeScreen))
+        let cartButton = UIBarButtonItem(image: UIImage(named: "home30"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(CheckoutViewController.actionGoToHome))
         
         self.navigationItem.rightBarButtonItem = cartButton
         
         //totalCartAmount.text = "\(String(allProductTotal + deliveryPrice))"
     }
     
-    @objc func homeScreen(){
+    @objc func actionGoToHome(){
         let homeScreen = storyboard?.instantiateViewController(withIdentifier: MainController.identifier) as! MainController
         navigationController?.show(homeScreen, sender: self)
     }
@@ -72,7 +72,7 @@ extension CheckoutViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CheckoutViewCell", for: indexPath) as! CheckoutViewCell
         let item = itemCart[indexPath.row]
         
-        cell.setProductAttribute(item)
+        cell.setupDataCart(item)
         
         return cell
     }

@@ -27,7 +27,7 @@ class CheckoutViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setProductAttribute(_ item: Cart){
+    func setupDataCart(_ item: Cart){
         productName.text = item.tensp
         
         let itemPrice = item.giatien 

@@ -13,7 +13,7 @@ class CartViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var totalPrice: UILabel!
-    @IBOutlet weak var totalItems: UILabel!
+    @IBOutlet weak var lbltotalQuantity: UILabel!
     @IBOutlet weak var orderButton: UIButton!
     static let identifier = "CartViewController"
     
@@ -40,22 +40,6 @@ class CartViewController: UIViewController {
         tableView.reloadData()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        //        let itemCart: [Cart] = []
-        //
-        //        do{
-        //            let relusts = itemCart
-        //            listCartItem = relusts
-        //        } catch {
-        //            print("Dữ liệu không được truy xuất")
-        //        }
-        //        for i in 0 ..< listCartItem.count {
-        //            print("listItems\(i): \(listCartItem[i])")
-        //        }
-       
-    }
-    
     func setupHoverQuantity(){
         var itemQuantity = 0
         for (Qty) in listCartItem {
@@ -64,13 +48,7 @@ class CartViewController: UIViewController {
         }
         
         totalQuantity = itemQuantity
-        totalItems.text = String("Quantity: \(totalQuantity)")
-        
-//        if itemQuantity != 0 && self.listCartItem.count > 0 {
-//
-//        } else {
-//            totalItems.text = "Quantity: 0"
-//        }
+        lbltotalQuantity.text = String("Quantity: \(totalQuantity)")
         
         self.orderButton.isEnabled = (itemQuantity != 0 && self.listCartItem.count > 0)
     }
@@ -94,11 +72,11 @@ class CartViewController: UIViewController {
     }
     
     func setupNavigationBar() {
-        let cartButton = UIBarButtonItem(image: UIImage(named: "home30"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(homeScreen))
+        let cartButton = UIBarButtonItem(image: UIImage(named: "home30"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(actionGoToHome))
         self.navigationItem.leftBarButtonItem = cartButton
     }
     
-    @objc func homeScreen(){
+    @objc func actionGoToHome(){
         let homeScreen = storyboard?.instantiateViewController(withIdentifier: MainController.identifier) as! MainController
         navigationController?.show(homeScreen, sender: self)
     }
@@ -144,8 +122,34 @@ extension CartViewController: CartViewCellDelegate {
     }
     
     func cartViewCellDelegate(_ cell: CartViewCell, quantity: Int, itemUpdate: Cart) {
-        self.totalItems.text = "Quantity: \(quantity)"
         
+        // update item quantity
+        itemUpdate.soluong = quantity
+        
+        var itemUpdateQuantity = 0
+
+        for item in listCartItem {
+            let itemQty = item.soluong
+            itemUpdateQuantity = itemUpdateQuantity + itemQty
+        }
+        
+        self.orderButton.isEnabled = itemUpdateQuantity != 0
+        
+        totalQuantity = itemUpdateQuantity
+        lbltotalQuantity.text = "Số lượng: \(totalQuantity)"
+        
+        var itemUpdatePrice = 0
+        var itemUpdateAmount = 0
+        for item in listCartItem {
+            let itemPrice = item.giatien
+            let itemQty = item.soluong
+            itemUpdateAmount = itemPrice * itemQty
+            itemUpdatePrice = itemUpdatePrice + itemUpdateAmount
+        }
+        
+        totalAmontPrice = itemUpdatePrice
+        totalPrice.text = "Tổng tiền: \(totalAmontPrice) VNĐ"
+
     }
     
     
