@@ -30,6 +30,8 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         passwordTF.delegate = self
     }
     
+    
+    
     func setupUIView() {
         nameUIView.setBorder(radius: 7, color: UIColor.white)
     }
@@ -49,7 +51,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
             newUserInfo.username = usernameTF.text!
             newUserInfo.password = passwordTF.text!
             
-            let isInserted = QueryLoaiSpModel.getInstance().insertUser(newUserInfo)
+            let isInserted = QueryDatabaseModel.getInstance().insertUser(newUserInfo)
             if isInserted {
                 Util.invokeAlertMethod(strTitle: "", strBody: "Thêm thành công", delegate: check() as AnyObject)
                 
@@ -69,7 +71,16 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func backButton(_ sender: Any) {
+        let revealViewController: SWRevealViewController = self.revealViewController()
+        let mainStroryboarb: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let desController = mainStroryboarb.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         
+        let newFrontViewController = UINavigationController.init(rootViewController: desController)
+        
+        DispatchQueue.main.async {
+            revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+            //UIApplication.shared.delegate!.window!!.rootViewController = newFrontViewController
+        }
     }
     
     func checkCantAdd() -> (succuess: Bool, error: String) {

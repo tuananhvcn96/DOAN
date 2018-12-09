@@ -10,6 +10,9 @@ import UIKit
 
 class SlideProductRuningCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var imgvAvata: UIImageView!
+    @IBOutlet weak var lblnameFood: UILabel!
+    @IBOutlet weak var lblInfoFood: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

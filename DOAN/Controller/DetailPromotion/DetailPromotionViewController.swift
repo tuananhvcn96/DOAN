@@ -74,7 +74,7 @@ class DetailPromotionViewController: UIViewController {
                 addCart.hinhanh = (UIImagePNGRepresentation(imageCart!))!
             }
         
-            let isInserted = QueryLoaiSpModel.getInstance().insertCart(addCart)
+            let isInserted = QueryDatabaseModel.getInstance().insertCart(addCart)
             listCart.append(addCart)
             
             if isInserted {
@@ -96,7 +96,7 @@ class DetailPromotionViewController: UIViewController {
 //                Util.invokeAlertMethod(strTitle: "", strBody: "cập nhật thất bại", delegate: nil)
 //            }
             
-            _ = QueryLoaiSpModel.getInstance().updateCart(RecoreId: categoryName.id, soluong: itemUpdate.soluong)
+            _ = QueryDatabaseModel.getInstance().updateCart(RecoreId: categoryName.id, soluong: itemUpdate.soluong)
 
             Util.invokeAlertMethod(strTitle: "", strBody: "recode updated !!", delegate: nil)
             print("\(listCart)")

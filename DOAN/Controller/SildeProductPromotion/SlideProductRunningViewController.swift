@@ -14,6 +14,10 @@ class SlideProductPromotionViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    var icon: Array = [UIImage]()
+    var nameArr: Array = [String]()
+    var infoArr: Array = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +25,10 @@ class SlideProductPromotionViewController: UIViewController {
         self.setupCollectionView()
         collectionView.showsHorizontalScrollIndicator = false
         self.setupNavigationBar()
+        
+        nameArr = ["Sandwiches Trow","Candy How", "Sandwiches Bow", "Nutifood", "Dink Tea"]
+        icon = [UIImage(named: "sanwitches1")!,UIImage(named: "candy")!,UIImage(named: "sanwitch2")!,UIImage(named: "nutifood")!,UIImage(named: "tea2")!]
+        infoArr = ["Perfectly baked, hearty and full of flavor","Perfectly baked, hearty and full of flavor","Perfectly baked, hearty and full of flavor","Perfectly baked, hearty and full of flavor","Perfectly baked, hearty and full of flavor"]
     }
     
     func setupNavigationBar(){
@@ -55,13 +63,17 @@ extension SlideProductPromotionViewController: UICollectionViewDataSource,UIColl
         pageControl.numberOfPages = count
         pageControl.isHidden = !(count > 1)
         
-        return count
+        return nameArr.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SlideProductRuningCollectionViewCell", for: indexPath) as? SlideProductRuningCollectionViewCell else {
             return UICollectionViewCell()
         }
+        
+        cell.lblnameFood.text = nameArr[indexPath.row]
+        cell.lblInfoFood.text = infoArr[indexPath.row]
+        cell.imgvAvata.image = icon[indexPath.row]
         
         return cell
     }

@@ -44,7 +44,7 @@ class MainController: UIViewController {
         super.viewWillAppear(animated)
         
 //        products = LoaiSanPham.getAll() as! [LoaiSanPham]
-        getAllDataInfo = QueryLoaiSpModel.getInstance().getAllData()
+        getAllDataInfo = QueryDatabaseModel.getInstance().getAllData()
         mainCollectionView.reloadData()
     }
     

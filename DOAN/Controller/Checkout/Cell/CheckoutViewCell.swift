@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol DelegateSwitchCell: class {
+    func valueChangeSwitch(_ cell: CheckoutViewCell, itemUpdate: Cart)
+}
+
 class CheckoutViewCell: UITableViewCell {
     
     @IBOutlet weak var productName: UILabel!
@@ -15,10 +19,15 @@ class CheckoutViewCell: UITableViewCell {
     @IBOutlet weak var productQuantity: UILabel!
 
     var productAllTotal: Int!
+    var itemCart: Cart?
+    weak var delegate: DelegateSwitchCell?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+         DispatchQueue.main.async {
+            self.delegate?.valueChangeSwitch(self, itemUpdate: self.itemCart!)
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,7 +36,7 @@ class CheckoutViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setupDataCart(_ item: Cart){
+    func setupDataCart(_ item: Cart) {
         productName.text = item.tensp
         
         let itemPrice = item.giatien 
@@ -36,6 +45,8 @@ class CheckoutViewCell: UITableViewCell {
         productAllTotal = itemPrice * itemQuantity
         productPrice.text = "\(String(productAllTotal))"
         productQuantity.text = String(describing: item.soluong)
+        
+        itemCart = item
     }
 
 }

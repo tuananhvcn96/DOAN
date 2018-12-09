@@ -51,7 +51,7 @@
 		CC4B82F0214D205600964A9A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4B82EF214D205600964A9A /* libsqlite3.0.tbd */; };
 		CC4B82F2214D232400964A9A /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B82F1214D232400964A9A /* Util.swift */; };
 		CC4B82F6214D529E00964A9A /* LoaiSP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B82F5214D529E00964A9A /* LoaiSP.swift */; };
-		CC4B82F8214D665500964A9A /* QueryLoaiSpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B82F7214D665500964A9A /* QueryLoaiSpModel.swift */; };
+		CC4B82F8214D665500964A9A /* QueryDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B82F7214D665500964A9A /* QueryDatabaseModel.swift */; };
 		CC8EC4742136851E00E85496 /* QueryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8EC4732136851E00E85496 /* QueryData.swift */; };
 		CC8EC47821368AB200E85496 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8EC47621368AB200E85496 /* MainCollectionViewCell.swift */; };
 		CC8EC47921368AB200E85496 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC8EC47721368AB200E85496 /* MainCollectionViewCell.xib */; };
@@ -116,7 +116,7 @@
 		CC4B82EF214D205600964A9A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		CC4B82F1214D232400964A9A /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		CC4B82F5214D529E00964A9A /* LoaiSP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaiSP.swift; sourceTree = "<group>"; };
-		CC4B82F7214D665500964A9A /* QueryLoaiSpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryLoaiSpModel.swift; sourceTree = "<group>"; };
+		CC4B82F7214D665500964A9A /* QueryDatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryDatabaseModel.swift; sourceTree = "<group>"; };
 		CC8EC4732136851E00E85496 /* QueryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryData.swift; sourceTree = "<group>"; };
 		CC8EC47621368AB200E85496 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		CC8EC47721368AB200E85496 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -445,7 +445,7 @@
 				AABDC3A921462342003873CC /* SanPham+CoreDataClass.swift */,
 				AABDC3AA21462342003873CC /* SanPham+CoreDataProperties.swift */,
 				CC8EC4732136851E00E85496 /* QueryData.swift */,
-				CC4B82F7214D665500964A9A /* QueryLoaiSpModel.swift */,
+				CC4B82F7214D665500964A9A /* QueryDatabaseModel.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -621,7 +621,7 @@
 				AA6BF141215DD99800D23746 /* DetailPromotionViewController.swift in Sources */,
 				CCF16943218FCAEA00795713 /* CheckoutViewCell.swift in Sources */,
 				CC8EC47821368AB200E85496 /* MainCollectionViewCell.swift in Sources */,
-				CC4B82F8214D665500964A9A /* QueryLoaiSpModel.swift in Sources */,
+				CC4B82F8214D665500964A9A /* QueryDatabaseModel.swift in Sources */,
 				CCCF93A72132FF46009EF093 /* MenuTableViewCell.swift in Sources */,
 				AABDC3AE21462342003873CC /* SanPham+CoreDataProperties.swift in Sources */,
 				AA9923EB2163886C005B408E /* Cart.swift in Sources */,

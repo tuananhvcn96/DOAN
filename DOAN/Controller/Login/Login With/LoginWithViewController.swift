@@ -40,7 +40,7 @@ class LoginWithViewController: UIViewController,UITextViewDelegate {
         usernameTextView.delegate = self
         passwordTextView.delegate = self
         
-        userInfo = QueryLoaiSpModel.getInstance().getAllUser()
+        userInfo = QueryDatabaseModel.getInstance().getAllUser()
     }
     
     override func viewWillAppear(_ animated: Bool) {

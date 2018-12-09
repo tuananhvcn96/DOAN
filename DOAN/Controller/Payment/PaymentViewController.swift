@@ -21,5 +21,19 @@ class PaymentViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.title = "Info Payment"
     }
-
+    @IBAction func actionToHome(_ sender: Any) {
+        UI.aLert(ui: self, title: "Thông báo", message: "Thành Công") { (unowned) in
+            let revealViewController: SWRevealViewController = self.revealViewController()
+            let mainStroryboarb: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let desController = mainStroryboarb.instantiateViewController(withIdentifier: "MainController") as! MainController
+            
+            let newFrontViewController = UINavigationController.init(rootViewController: desController)
+            
+            DispatchQueue.main.async {
+                revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+                //UIApplication.shared.delegate!.window!!.rootViewController = newFrontViewController
+            }
+        }
+    }
+    
 }

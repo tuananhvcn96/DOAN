@@ -22,4 +22,7 @@ class UserInfoViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
         self.navigationController?.popViewController(animated: true)
     }
+    @IBAction func actionToFavotites(_ sender: UIButton) {
+        
+    }
 }

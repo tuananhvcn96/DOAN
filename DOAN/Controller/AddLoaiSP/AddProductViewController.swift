@@ -95,7 +95,7 @@ class AddTypeProductViewController : UIViewController, UIImagePickerControllerDe
                 productInfo.hinhanh = UIImagePNGRepresentation(image!) as! Data
             }
             
-            let isInserted = QueryLoaiSpModel.getInstance().insertData(productInfo)
+            let isInserted = QueryDatabaseModel.getInstance().insertData(productInfo)
             if isInserted {
                 Util.invokeAlertMethod(strTitle: "", strBody: "Thêm thành công", delegate: nil)
                 self.dismiss(animated: true, completion: nil)

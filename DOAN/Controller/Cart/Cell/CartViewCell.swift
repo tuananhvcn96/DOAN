@@ -23,7 +23,7 @@ class CartViewCell: UITableViewCell {
     
     var delegate: CartViewCellDelegate?
     var itemCart: Cart?
-    var purchaseMax = 10
+    var quantityMax = 10
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,16 +47,15 @@ class CartViewCell: UITableViewCell {
         
         let images = item.hinhanh
         productImageView.image = UIImage(data: images as Data)
-        
         itemCart = item
     }
 
     @IBAction func stepperValueChanged(_ sender: AnyObject) {
         let value = Int(productStepper.value)
-        productStepper.maximumValue = value >= purchaseMax ? productStepper.value: Double(purchaseMax)
+        productStepper.maximumValue = value >= quantityMax ? productStepper.value: Double(quantityMax)
         
         self.setupItemQuantity(value)
-        print(value)
+        //print(value)
     }
     
     func setupItemQuantity(_ quantity: Int){

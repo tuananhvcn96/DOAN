@@ -10,13 +10,13 @@
 import UIKit
 import FMDB
 
-let sharedInstance = QueryLoaiSpModel()
+let sharedInstance = QueryDatabaseModel()
 
-class QueryLoaiSpModel : NSObject {
+class QueryDatabaseModel : NSObject {
     
     var database: FMDatabase? = nil
     
-    class func getInstance() -> QueryLoaiSpModel{
+    class func getInstance() -> QueryDatabaseModel{
         if (sharedInstance.database == nil){
             sharedInstance.database = FMDatabase(path: Util.getPath(fileName: "shopping.db"))
         }
@@ -161,7 +161,7 @@ class QueryLoaiSpModel : NSObject {
             while resultSet.next() {
                 let item: Cart = Cart()
                 item.id = Int(resultSet.int(forColumn: "id"))
-                item.soluong = Int(resultSet.int(forColumn: "id"))
+                item.soluong = Int(resultSet.int(forColumn: "soluong"))
                 itemInfo.add(item)
             }
         }
@@ -170,9 +170,24 @@ class QueryLoaiSpModel : NSObject {
         return itemInfo
     }
     
-//    func updateCartCell(id: Int, soluong: Int, giatien: Int) -> NSMutableArray {
-//        let resultSet: FMResultSet! = sharedInstance.database?.executeQuery("UPDATE Cart ", values: <#T##[Any]?#>)
-//    }
+    func updateCartCell(id: Int, soluong: Int) -> NSMutableArray {
+        sharedInstance.database!.open()
+        
+        let resultSet: FMResultSet! = sharedInstance.database!.executeQuery("UPDATE Cart SET soluong = ? WHERE id = ?", withArgumentsIn: [soluong,id])
+        
+        let itemInfo: NSMutableArray = NSMutableArray()
+        if (resultSet != nil) {
+            while resultSet.next() {
+                let item: Cart = Cart()
+                item.id = Int(resultSet.int(forColumn: "id"))
+                item.soluong = Int(resultSet.int(forColumn: "soluong"))
+                itemInfo.add(item)
+            }
+        }
+        
+        sharedInstance.database!.close()
+        return itemInfo
+    }
     
     func deleteCart(RecoreId: Int) -> NSMutableArray {
         sharedInstance.database?.open()

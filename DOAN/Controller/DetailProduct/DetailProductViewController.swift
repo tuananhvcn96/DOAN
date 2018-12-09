@@ -23,7 +23,7 @@ class DetailProductViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.title = "Product Type"
         navigationItem.leftBarButtonItem = navigationLefBarItem()
-        product = QueryLoaiSpModel.getInstance().getAllDataProduct(id: id!)
+        product = QueryDatabaseModel.getInstance().getAllDataProduct(id: id!)
         self.setupTableView()
         tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -79,8 +79,9 @@ extension DetailProductViewController: UITableViewDataSource,UITableViewDelegate
         let productPromotion = product[indexPath.row]
         let vc = DetailPromotionViewController.newVC(categoryName: productPromotion)
         vc.categoryName = productPromotion
-    
-        self.present(vc, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.present(vc, animated: true, completion: nil)
+        }
     }
 }
 

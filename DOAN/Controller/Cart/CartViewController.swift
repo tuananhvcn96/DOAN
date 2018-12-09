@@ -24,7 +24,7 @@ class CartViewController: UIViewController {
     var quantityStepper: Int = 0
     
     override func viewDidLoad() {
-        title = "Giỏ Hàng"
+        title = "Cart"
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
@@ -68,7 +68,7 @@ class CartViewController: UIViewController {
     }
     
     func setupToQuery(){
-        listCartItem = QueryLoaiSpModel.getInstance().getAllCart()
+        listCartItem = QueryDatabaseModel.getInstance().getAllCart()
     }
     
     func setupNavigationBar() {
@@ -112,8 +112,8 @@ extension CartViewController: CartViewCellDelegate {
         //let itemUpdate = listCartItem[indexPath]
         print("hover")
         
-        _ = QueryLoaiSpModel.getInstance().deleteCart(RecoreId: indexPath!)
-        listCartItem = QueryLoaiSpModel.getInstance().getAllCart()
+        _ = QueryDatabaseModel.getInstance().deleteCart(RecoreId: indexPath!)
+        listCartItem = QueryDatabaseModel.getInstance().getAllCart()
         
         setupTotalPrice()
         setupHoverQuantity()
@@ -134,6 +134,11 @@ extension CartViewController: CartViewCellDelegate {
         }
         
         self.orderButton.isEnabled = itemUpdateQuantity != 0
+        if itemUpdateQuantity == 0 {
+            self.orderButton.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0, alpha: 0.2)
+        } else {
+            self.orderButton.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0, alpha: 1.0)
+        }
         
         totalQuantity = itemUpdateQuantity
         lbltotalQuantity.text = "Số lượng: \(totalQuantity)"
@@ -148,12 +153,10 @@ extension CartViewController: CartViewCellDelegate {
         }
         
         totalAmontPrice = itemUpdatePrice
-        totalPrice.text = "Tổng tiền: \(totalAmontPrice) VNĐ"
-
+        totalPrice.text = "Tổng tiền: \(totalAmontPrice)"
+        _ = QueryDatabaseModel.getInstance().updateCartCell(id: itemUpdate.id, soluong: itemUpdate.soluong)
+        tableView.reloadData()
     }
-    
-    
-    
 }
 
 

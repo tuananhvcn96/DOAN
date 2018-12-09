@@ -62,7 +62,7 @@ class LoginViewController: UIViewController {
     @IBAction func tapToDangKyAcc(_ sender: Any) {
         let stroryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc = stroryboard.instantiateViewController(withIdentifier: RegistrationViewController.iddentifer) as! RegistrationViewController
-        self.present(vc, animated: true, completion: nil)
+        self.navigationController?.show(vc, sender: nil)
     }
 }
 

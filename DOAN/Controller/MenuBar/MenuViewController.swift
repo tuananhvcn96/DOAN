@@ -24,7 +24,7 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         menuNameArr = ["Home", "Promotion", "Product","Login","User"]
-        iconImage = [UIImage(named: "pic1")!,UIImage(named: "pic2")!,UIImage(named: "pic3")!,UIImage(named: "pic4")!,UIImage(named: "pic5")!]
+        iconImage = [UIImage(named: "pic6")!,UIImage(named: "pic7")!,UIImage(named: "pic8")!,UIImage(named: "pic9")!,UIImage(named: "pic10")!]
         // Do any additional setup after loading the view.
         imageViewProfile.image = UIImage(named: "AppIcon-1")
         imageViewProfile.layer.borderColor = UIColor.red.cgColor

@@ -42,7 +42,7 @@ class AddSanPhamViewController: UIViewController, UIImagePickerControllerDelegat
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        productType = QueryLoaiSpModel.getInstance().getAllData()
+        productType = QueryDatabaseModel.getInstance().getAllData()
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -88,7 +88,7 @@ class AddSanPhamViewController: UIViewController, UIImagePickerControllerDelegat
             addProduct.hinhanh = UIImagePNGRepresentation(image!) as! Data
         }
         
-        let isInserted = QueryLoaiSpModel.getInstance().insertDataProduct(addProduct)
+        let isInserted = QueryDatabaseModel.getInstance().insertDataProduct(addProduct)
         if isInserted {
             Util.invokeAlertMethod(strTitle: "", strBody: "Thêm thành công", delegate: nil)
         } else {
