@@ -17,4 +17,5 @@ class FavoritesTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    lleuleu
 }
